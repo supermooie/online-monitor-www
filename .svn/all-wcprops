@@ -1,0 +1,231 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 24
+/pulseatparkes/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/pulseatparkes/!svn/ver/128/www/dev
+END
+get_current_utc.php
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/pulseatparkes/!svn/ver/22/www/dev/get_current_utc.php
+END
+get_current_aest.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/pulseatparkes/!svn/ver/20/www/dev/get_current_aest.php
+END
+get_apsr_data.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/pulseatparkes/!svn/ver/96/www/dev/get_apsr_data.php
+END
+get_dfb3_search_obs_data.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pulseatparkes/!svn/ver/48/www/dev/get_dfb3_search_obs_data.php
+END
+get_dfb4_search_obs_data.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/pulseatparkes/!svn/ver/48/www/dev/get_dfb4_search_obs_data.php
+END
+get_obs_status_update_time.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/pulseatparkes/!svn/ver/24/www/dev/get_obs_status_update_time.php
+END
+apr10sch_v1b.html
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/pulseatparkes/!svn/ver/20/www/dev/apr10sch_v1b.html
+END
+get_datfile.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/pulseatparkes/!svn/ver/81/www/dev/get_datfile.php
+END
+update_dfb3_fold.js
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/pulseatparkes/!svn/ver/20/www/dev/update_dfb3_fold.js
+END
+update_dfb4_fold.js
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/pulseatparkes/!svn/ver/20/www/dev/update_dfb4_fold.js
+END
+get_obs_status.php
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/pulseatparkes/!svn/ver/42/www/dev/get_obs_status.php
+END
+.htaccess
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/pulseatparkes/!svn/ver/124/www/dev/.htaccess
+END
+jquery.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/pulseatparkes/!svn/ver/20/www/dev/jquery.min.js
+END
+get_obs_information.php
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/pulseatparkes/!svn/ver/115/www/dev/get_obs_information.php
+END
+get_projects.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/pulseatparkes/!svn/ver/48/www/dev/get_projects.php
+END
+paz.php
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/pulseatparkes/!svn/ver/20/www/dev/paz.php
+END
+update_parkes_webcam.js
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/pulseatparkes/!svn/ver/45/www/dev/update_parkes_webcam.js
+END
+update_dfb3_search.js
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/pulseatparkes/!svn/ver/20/www/dev/update_dfb3_search.js
+END
+update_dfb4_search.js
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/pulseatparkes/!svn/ver/20/www/dev/update_dfb4_search.js
+END
+test.html
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/pulseatparkes/!svn/ver/20/www/dev/test.html
+END
+update_apsr.js
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/pulseatparkes/!svn/ver/50/www/dev/update_apsr.js
+END
+get_vapline.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/pulseatparkes/!svn/ver/81/www/dev/get_vapline.php
+END
+scripts.min.js
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/pulseatparkes/!svn/ver/20/www/dev/scripts.min.js
+END
+pazi_scripts.js
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/pulseatparkes/!svn/ver/20/www/dev/pazi_scripts.js
+END
+create_plot.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/pulseatparkes/!svn/ver/20/www/dev/create_plot.php
+END
+monitor.html
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/pulseatparkes/!svn/ver/20/www/dev/monitor.html
+END
+get_vapstats.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/pulseatparkes/!svn/ver/84/www/dev/get_vapstats.php
+END
+update.sh
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/pulseatparkes/!svn/ver/20/www/dev/update.sh
+END
+update_plot.js
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/pulseatparkes/!svn/ver/20/www/dev/update_plot.js
+END
+get_obs_data.php
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/pulseatparkes/!svn/ver/48/www/dev/get_obs_data.php
+END
+get_dfb3_fold_obs_data.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/pulseatparkes/!svn/ver/56/www/dev/get_dfb3_fold_obs_data.php
+END
+get_dfb4_fold_obs_data.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/pulseatparkes/!svn/ver/56/www/dev/get_dfb4_fold_obs_data.php
+END
+pazi.html
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/pulseatparkes/!svn/ver/20/www/dev/pazi.html
+END
+get_current_lmst.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/pulseatparkes/!svn/ver/24/www/dev/get_current_lmst.php
+END
+update_plot.php
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/pulseatparkes/!svn/ver/20/www/dev/update_plot.php
+END
+update_freq.js
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/pulseatparkes/!svn/ver/20/www/dev/update_freq.js
+END
+index.html
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/pulseatparkes/!svn/ver/127/www/dev/index.html
+END

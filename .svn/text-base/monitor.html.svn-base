@@ -1,0 +1,75 @@
+<html>
+<title>Monitor DFB Observations</title>
+<head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function() {
+    // Get whether we are currently observing a search or fold file with
+    // DFB3 and DFB4.
+    $('#dfb3_observing_status').load('get_dfb3_obs_status.php');
+    $('#dfb4_observing_status').load('get_dfb4_obs_status.php');
+
+    // Display latest plots.
+    $.getScript('update_dfb3_fold.js');
+    $.getScript('update_dfb4_fold.js');
+
+    // Update table to latest observing parameters values.
+    $('#table').load('get_fold_obs_data.php');
+
+    var refreshId = setInterval(function() {
+      $('#dfb3_observing_status').load('get_dfb3_obs_status.php');
+      $('#dfb4_observing_status').load('get_dfb4_obs_status.php');
+      $.getScript('update_dfb3_fold.js');
+      $.getScript('update_dfb4_fold.js');
+
+      $('#table').load('get_fold_obs_data.php');
+      }, 5000);
+    }
+
+    $('#dfb_fold_stokes').toggle(
+
+
+    );
+
+    /*$(obj).children("img").toggle(
+        function(){ $(this).attr("src", "Images/TreeExpand.gif"); },
+        function(){ $(this).attr("src", "Images/TreeCollapse.gif"); }
+        );*/
+
+</script>
+
+<body>
+  <table class="pretty" border="1">
+    <tr><td colspan="2" align="center">Observing Status</td></tr>
+    <tr><td>PDFB3</td><td id="dfb3_observing_status"></td></tr>
+    <tr><td>PDFB4</td><td id="dfb4_observing_status"></td></tr>
+  </table>
+
+  <table border="1">
+    <tr><td>DFB3 <input type="checkbox" name="box" value="dfb3" id="chkbox"/> </td></tr>
+    <tr><td>DFB4 <input type="checkbox" name="box" value="dfb4" id="chkbox"/> </td></tr>
+  </table>
+
+  <h2>DFB3 Fold Mode</h2>
+  <a href="big-dfb3_fold_stokes.gif" target="_blank"><img id="dfb3_fold_stokes" src="" /></a>
+  <a href="big-dfb3_fold_time.gif" target="_blank"><img id="dfb3_fold_time" src="" /></a>
+  <a href="big-dfb3_fold_freq.gif" target="_blank"><img id="dfb3_fold_freq" src="" /></a>
+
+  <h2>DFB3 Search Mode</h2>
+  <a href="big-dfb3_search_freq.gif" target="_blank"><img id="dfb3_search_freq" src="" /></a>
+
+  <h2>DFB4 Fold Mode</h2>
+  <a href="big-dfb4_fold_stokes.gif" target="_blank"><img id="dfb4_fold_stokes" src="" /></a>
+  <a href="big-dfb4_fold_time.gif" target="_blank"><img id="dfb4_fold_time" src="" /></a>
+  <a href="big-dfb4_fold_freq.gif" target="_blank"><img id="dfb4_fold_freq" src="" /></a>
+
+
+  <!-- <p><img id="dfb3_search" src="" align="left"/> -->
+  <div id="table"></div>
+
+  </div>
+</body>
+</html>

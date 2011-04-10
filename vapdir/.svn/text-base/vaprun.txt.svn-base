@@ -1,0 +1,119 @@
+backend,Backend 
+beconfig,Backend config file
+be_dcc,Downconversion corrected
+be_delay,Digitiser delay
+be_phase,Backend phase convention
+period,Folding period
+tcycle,Correlator cycle time
+nch_bp,Bandpass Nchans
+npol_bp,Bandpass Npols
+bw,Bandwidth (MHz)
+dm,DM
+dmc,DM corrected
+wt_freq,Centre freq (weighted)
+freq_phs,Pulse phase freq
+freq_pa,PA freq 
+length,Obs. Length (s)
+name,Source
+nbin_obs,Observed Nbins
+nchan_obs,Observed Nchans
+npol_obs,Observed Npols
+nsub_obs,Observed Nsubs
+obs_mode,Observation mode
+polc,Pol calibrated
+rm,RM (rad/m^2)
+rmc,Faraday Rotation corrected
+scale,Units of amplitude
+state,State of amplitude
+tsub,First subint duration (s)
+type,Observation type
+dig_mode,Digitiser mode
+dyn_levt,Dynamic level time
+levmode_digcnts,Digitiser level mode
+nlev_digcnts,No. digitiser levels
+npthist,No. histogram points
+dig_atten,Digitiser attenuation
+levmode_digstat,Digitiser level mode 
+ncycsub,Correlator cycles/subint
+ndigstat,No. digitised channels
+npar_digstat,No. digitiser parameters
+MJD_feed,Calibration epoch (MJD)
+nchan_feed,No. feed coupling chans
+npar_feed,No. coupling parameters
+epoch_fluxcal,Fluxcal epoch (MJD)
+nchan_fluxcal,No. fluxcal freq chans
+nrcvr_fluxcal,No. fluxcal rcvr chans
+chbw,Channel bandwidth
+freq,Frequency (MHz)	
+nchan,Nchans	
+nbin,Nbins
+nbin_prd,Nbins/period
+npol,Npols
+nsub,Nsubs
+tbin,Time per bin/sample
+observer,Observer(s)
+projid,Project ID
+coord_md,Coord mode
+dec,Dec
+equinox,Equinox coords
+fracmjd,Day fraction (MJD)
+intmjd,Day (MJD)
+mjd,MJD
+parang,Par. angle (archive mid point)
+ra,RA
+stp_crd1,Stop coord 1
+stp_crd2,Stop coord 2
+stt_crd1,Start coord 1
+stt_crd2,Start coord 2
+stt_date,Start UT date
+stt_imjd,Start MJD
+stt_lst,Start LST
+stt_offs[s],Start time offset (s)
+stt_smjd[s],Start time (s past UTC 00h)
+stt_time,Start UTC
+trk_mode,Track mode
+basis,Receptor basis
+fac,Feed angle (corrected)
+fa_req,Feed angle (requested)
+fda,Feed angle first subint
+fd_hand,Receptor basis hand
+fd_mode,Feed track mode
+fd_sang,Feed symmetry angle
+fd_xyph,Reference source phase
+ibeam,Multibeam beam no.
+nrcpt,No. receptors
+pnt_id,Multibeam centre ID
+rcvr,Reciever
+xoffset,Feed X-axis offset
+nbits,No. bits/datum
+nch_strt,Start chan no.
+nsblk,Samples/row
+subint_type,Time axis 
+subint_unit,Time axis unit
+tsamp,SEARCH sample interval (s)
+zero_off,SEARCH zero offset
+signint,SEARCH sign
+ant_x,ITRF X coordinate
+ant_y,ITRF Y coordinate
+ant_z,ITRF Z coordinate
+bmaj,Beam major axis (deg)
+bmin,Beam minor axis (deg)
+bpa,Beam position angle (deg)
+date,File creation date
+file,File no.
+hdrver,Header version
+asite,Telescope TEMPO code
+telescop,Telescope name
+tlabel,Tape label
+cal_dcyc,Cal duty cycle
+cal_freq,Cal modulation freq
+cal_mode,Cal mode
+cal_phs,Cal phase
+filename,Filename
+SOURCE,Source
+RA,RA
+DEC,Dec
+CFREQ,Frequency (MHz)
+PID,Project ID
+BANDWIDTH,Bandwidth (MHz)
+
