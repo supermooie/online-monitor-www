@@ -3,5 +3,6 @@
 *.png
 *.gif
 *.dat
+*.info
 
 dfb_status.txt
