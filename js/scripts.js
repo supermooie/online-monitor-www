@@ -10,7 +10,6 @@ function HideDefaults()
   $('#dfb4_main').hide();
   $('#dfb3_search_main').hide();
   $('#dfb4_search_main').hide();
-  $('#apsr_main').hide();
   $('#webcam_big').hide();
   $('#help').hide();
 }
@@ -21,6 +20,7 @@ function HandleTabs()
   $("#box2").tabs();
   $("#box3").tabs();
   $("#box4").tabs();
+  $("#box6").tabs(); // CASPSR
 }
 
 function HandleButtonset()
@@ -66,22 +66,23 @@ function UpdateObservingStatuses()
 // Updates latest plots if backend is currently shown.
 function UpdatePlots()
 {
-  $.getScript('update_apsr.js');
+  $.getScript('js/update_apsr.js');
+  $.getScript('js/update_caspsr.js');
 
   if ($('#inner-box2').is(":visible") == true) {
-    $.getScript('update_dfb3_fold.js');
+    $.getScript('js/update_dfb3_fold.js');
   }
 
   if ($('#inner-box8').is(":visible") == true) {
-    $.getScript('update_dfb3_search.js');
+    $.getScript('js/update_dfb3_search.js');
   }
 
   if ($('#inner-box4').is(":visible") == true) {
-    $.getScript('update_dfb4_fold.js');
+    $.getScript('js/update_dfb4_fold.js');
   }
 
   if ($('#inner-box9').is(":visible") == true) {
-    $.getScript('update_dfb4_search.js');
+    $.getScript('js/update_dfb4_search.js');
   }
 }
 
@@ -92,7 +93,7 @@ function UpdateWebcamImage()
     sleep--;
   } else {
     sleep = refresh_rate;
-    $.getScript('update_parkes_webcam.js');
+    $.getScript('js/update_parkes_webcam.js');
   }
 }
 
@@ -104,6 +105,7 @@ function UpdateObservingParameters()
   $('#dfb3_search_data').load('get_obs_information.php?obs_type=dfb3_search');
   $('#dfb4_search_data').load('get_obs_information.php?obs_type=dfb4_search');
   $('#apsr_obs_data').load('get_obs_information.php?obs_type=apsr');
+  $('#caspsr_obs_data').load('get_obs_information.php?obs_type=caspsr');
 }
 
 function GetCurrentProject()
@@ -141,15 +143,6 @@ $(document).ready(function() {
     $('a#obs-toggle').click(function() {
       $('#obs-box').toggle(400);
       return false;
-      });
-
-    $('a#apsr-toggle').click(function() {
-      $('#apsr-box').toggle(400);
-      return false;
-      });
-
-      $("input:radio").change(function(eventObject){
-          is_p456 = $("#radio1").val();
       });
 });
 

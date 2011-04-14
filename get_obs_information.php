@@ -16,6 +16,7 @@ define('OBSERVATION_INFORMATION_DIRECTORY', 'info');
 //  * DFB3
 //  * DFB4
 //  * APSR
+//  * CASPSR 
 //
 // Search Mode:
 //  * DFB3
@@ -25,7 +26,8 @@ static $observation_types_and_files = array(
   'dfb4_fold' => 'dfb4_fold.dat',
   'dfb3_search' => 'dfb3_search.dat',
   'dfb4_search' => 'dfb4_search.dat',
-  'apsr' => 'apsr_obs.info'
+  'apsr' => 'apsr_obs.info',
+  'caspsr' => 'caspsr_obs.info'
 );
 
 // Deterine the observation type.
@@ -40,7 +42,7 @@ if ($information_file == NULL) {
 
 // The format for the observation information is different for APSR
 // and the DFBs.
-if ($obs_type == 'apsr') {
+if ($obs_type == 'apsr' || $obs_type == 'caspsr') {
   GetApsrObsInformation($information_file);
 } else {
   GetDfbObsInformation($information_file);
