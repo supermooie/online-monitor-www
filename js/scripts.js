@@ -1,6 +1,8 @@
 var refresh_rate = 5;
 var sleep = 0;
 
+var is_p456 = 0;
+
 // Hides the default main (big) DFB3 and DFB4 images.
 function HideDefaults()
 {
@@ -19,6 +21,22 @@ function HandleTabs()
   $("#box2").tabs();
   $("#box3").tabs();
   $("#box4").tabs();
+}
+
+function HandleButtonset()
+{
+  $("#radio").buttonset();
+}
+
+function HandleProgressbar()
+{
+  if (is_p456) {
+    $.get('get_observation_progress.php?obs_type=dfb3_fold', function(data) {
+        $("#pb1").progressBar(data);
+    });
+  } else {
+    $("#pb1").html('');
+  }
 }
 
 function HandleSlider()
@@ -129,6 +147,10 @@ $(document).ready(function() {
       $('#apsr-box').toggle(400);
       return false;
       });
+
+      $("input:radio").change(function(eventObject){
+          is_p456 = $("#radio1").val();
+      });
 });
 
 // Interval events.
@@ -141,6 +163,7 @@ $(document).ready(function() {
         UpdatePlots();
         UpdateObservingParameters();
         UpdateObservingStatuses();
+        HandleProgressbar();
       }, 5000);
 
     setInterval(function() {
@@ -279,4 +302,6 @@ $(document).ready(function() {
     GetTimes();
     HandleTabs();
     HandleSlider();
+    HandleProgressbar();
+    HandleButtonset();
 });
