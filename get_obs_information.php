@@ -57,6 +57,12 @@ function GetApsrObsInformation($data_file)
 
   echo '<table class="gridtable" align="left">';
 
+  if ($data_file == 'apsr_obs.info') {
+    echo '<tr><th rowspan=7>A</br>P</br>S</br>R</th></tr>';
+  } else {
+    echo '<tr><th rowspan=7>C</br>A</br>S</br>P</br>S</br>R</th></tr>';
+  }
+
   for ($i = 3; $i <= 8; $i++) {
     list($key, $value) = preg_split('/\s+/', trim($data[$i]));
 
