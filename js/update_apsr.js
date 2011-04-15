@@ -15,9 +15,3 @@ document.getElementById('apsr_time').src = url;
 url = 'http://pulseatparkes.atnf.csiro.au/dev/apsr_freq_vs_phase.png?' + random;
 img.src = url;
 document.getElementById('apsr_freq').src = url;
-
-if ($('#apsr_main').is(":visible") == true) {
-  url = ADDRESS + $('#apsr_main').data("src").plot + '?' + random;
-  img.src = url;
-  document.getElementById('apsr_main').src = url;
-}

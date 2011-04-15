@@ -52,58 +52,61 @@ function GetApsrObsInformation($data_file)
 {
   $vp = new VapParameters();
 
-  $data = file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file);
-  list($key, $value) = preg_split('/\s+/', trim($data[$i]));
-
-  echo '<table class="gridtable" align="left">';
-
-  if ($data_file == 'apsr_obs.info') {
-    echo '<tr><th rowspan=7>A</br>P</br>S</br>R</th></tr>';
-  } else {
-    echo '<tr><th rowspan=7>C</br>A</br>S</br>P</br>S</br>R</th></tr>';
-  }
-
-  for ($i = 3; $i <= 8; $i++) {
+  if (is_file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file)) {
+    $data = file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file);
     list($key, $value) = preg_split('/\s+/', trim($data[$i]));
 
-    $key = $vp->convert_vap_parameter($key);
-    echo "<tr><td> $key </td><td> $value </td></tr>";
+    echo '<table class="gridtable" align="left">';
+
+    if ($data_file == 'apsr_obs.info') {
+      echo '<tr><th rowspan=7>A</br>P</br>S</br>R</th></tr>';
+    } else {
+      echo '<tr><th rowspan=7>C</br>A</br>S</br>P</br>S</br>R</th></tr>';
+    }
+
+    for ($i = 3; $i <= 8; $i++) {
+      list($key, $value) = preg_split('/\s+/', trim($data[$i]));
+
+      $key = $vp->convert_vap_parameter($key);
+      echo "<tr><td> $key </td><td> $value </td></tr>";
+    }
+    echo '</table>';
   }
-  echo '</table>';
 }
 
 function GetDfbObsInformation($data_file)
 {
   $vp = new VapParameters();
 
-  $data = file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file);
+  if (is_file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file)) {
+    $data = file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file);
 
-  $vap_fields = explode('  ', $data[0]);
-  $vap_values = explode('  ', $data[1]);
-  // TODO: In a perfect world, we should check to see that the sizes of
-  // $vap_fields and $vap_values are equal.
+    $vap_fields = explode('  ', $data[0]);
+    $vap_values = explode('  ', $data[1]);
+    // TODO: In a perfect world, we should check to see that the sizes of
+    // $vap_fields and $vap_values are equal.
 
-  $vapfile = 'vapdir/vaprun.txt';
+    $vapfile = 'vapdir/vaprun.txt';
 
-  echo '<table border=1 class="gridtable" align="left">';
+    echo '<table border=1 class="gridtable" align="left">';
 
-  $count = count($vap_fields);
-  for ($i = 0; $i < $count; $i++) {
-    echo '<tr>';
-    $vapval = $vp->convert_vap_parameter(trim($vap_fields[$i]));
+    $count = count($vap_fields);
+    for ($i = 0; $i < $count; $i++) {
+      echo '<tr>';
+      $vapval = $vp->convert_vap_parameter(trim($vap_fields[$i]));
 
-    if ($vapval) {
-      echo "<td>$vapval</td>";
-    } else { 
-      echo "<td>$newvalue[0]</td>"; 
+      if ($vapval) {
+        echo "<td>$vapval</td>";
+      } else { 
+        echo "<td>$newvalue[0]</td>"; 
+      }
+
+      echo "<td>$vap_values[$i]</td>";
+
+      echo "</tr>";
     }
-
-    echo "<td>$vap_values[$i]</td>";
-
-    echo "</tr>";
+    echo '</table>';
   }
-  echo '</table>';
-
 }
 
 ?>
