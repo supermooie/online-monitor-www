@@ -52,16 +52,18 @@ function GetApsrObsInformation($data_file)
 {
   $vp = new VapParameters();
 
-  if (is_file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file)) {
-    $data = file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file);
+  $file_to_read = OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file;
+
+  if (is_file($file_to_read) and filesize($file_to_read) > 0) {
+    $data = file($file_to_read);
     list($key, $value) = preg_split('/\s+/', trim($data[$i]));
 
     echo '<table class="gridtable" align="left">';
 
     if ($data_file == 'apsr_obs.info') {
-      echo '<tr><th rowspan=7>A</br>P</br>S</br>R</th></tr>';
+      echo '<tr><th rowspan=7>A<br>P<br>S<br>R</th></tr>';
     } else {
-      echo '<tr><th rowspan=7>C</br>A</br>S</br>P</br>S</br>R</th></tr>';
+      echo '<tr><th rowspan=7>C<br>A<br>S<br>P<br>S<br>R</th></tr>';
     }
 
     for ($i = 3; $i <= 8; $i++) {
@@ -78,8 +80,10 @@ function GetDfbObsInformation($data_file)
 {
   $vp = new VapParameters();
 
-  if (is_file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file)) {
-    $data = file(OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file);
+  $file_to_read = OBSERVATION_INFORMATION_DIRECTORY . '/' . $data_file;
+
+  if (is_file($file_to_read) and filesize($file_to_read) > 0) {
+    $data = file($file_to_read);
 
     $vap_fields = explode('  ', $data[0]);
     $vap_values = explode('  ', $data[1]);
@@ -89,6 +93,12 @@ function GetDfbObsInformation($data_file)
     $vapfile = 'vapdir/vaprun.txt';
 
     echo '<table border=1 class="gridtable" align="left">';
+
+    if ($data_file == 'dfb3_fold.dat') {
+      echo '<tr><th rowspan=8>D<br>F<br>B<br>3</th></tr>';
+    } else {
+      echo '<tr><th rowspan=8>D<br>F<br>B<br>4</th></tr>';
+    }
 
     $count = count($vap_fields);
     for ($i = 0; $i < $count; $i++) {

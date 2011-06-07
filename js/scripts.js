@@ -196,6 +196,15 @@ $(document).ready(function() {
       return false;
       });
 
+    $('a#dfb3_bandpass_toggle').click(function() {
+      $('#dfb3_main').show(
+        "fast",
+        function(){ $(this).attr("src", "big-dfb3_bandpass.gif?" + Math.random()); }
+        );
+      $('#dfb3_main').data("src", { plot: 'big-dfb3_bandpass.gif' });
+      return false;
+      });
+
     // TODO: get dfb4 and dfb4 to hide
     $('a#dfb3_main_toggle').click(function() {
       $('#dfb3_main').hide("fast")
@@ -227,6 +236,15 @@ $(document).ready(function() {
         function(){ $(this).attr("src", "big-dfb4_fold_freq.gif?" + Math.random()); }
         );
       $('#dfb4_main').data("src", { plot: 'big-dfb4_fold_freq.gif' });
+      return false;
+      });
+
+    $('a#dfb4_bandpass_toggle').click(function() {
+      $('#dfb4_main').show(
+        "fast",
+        function(){ $(this).attr("src", "big-dfb4_bandpass.gif?" + Math.random()); }
+        );
+      $('#dfb4_main').data("src", { plot: 'big-dfb4_bandpass.gif' });
       return false;
       });
 

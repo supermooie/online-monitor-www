@@ -15,3 +15,8 @@ document.getElementById('caspsr_time').src = url;
 url = 'http://pulseatparkes.atnf.csiro.au/dev/caspsr_freq_vs_phase.png?' + random;
 img.src = url;
 document.getElementById('caspsr_freq').src = url;
+
+// plot: bandpass (pav -BTp)
+url = 'http://pulseatparkes.atnf.csiro.au/dev/caspsr_bandpass.png?' + random;
+img.src = url;
+document.getElementById('caspsr_bandpass').src = url;

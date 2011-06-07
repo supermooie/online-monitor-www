@@ -16,6 +16,13 @@ url = 'http://pulseatparkes.atnf.csiro.au/dev/dfb4_fold_freq.gif?' + random;
 img.src = url;
 document.getElementById('dfb4_fold_freq').src = url;
 
+// PDFB4 fold plot: bandpass (pav -BTp)
+url = 'http://pulseatparkes.atnf.csiro.au/dev/dfb4_bandpass.gif?' + random;
+img.src = url;
+document.getElementById('dfb4_bandpass').src = url;
+
+var ADDRESS = 'http://pulseatparkes.atnf.csiro.au/dev/';
+
 if ($('#dfb4_main').is(":visible") == true) {
   url = ADDRESS + $('#dfb4_main').data("src").plot + '?' + random;
   img.src = url;
