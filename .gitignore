@@ -4,5 +4,6 @@
 *.gif
 *.dat
 *.info
+*.svn
 
 dfb_status.txt
