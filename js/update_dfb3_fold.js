@@ -2,26 +2,26 @@ var img = new Image();
 var random = Math.random();
 
 // PDFB3 fold plot: stokes cyclindrical (pav -SFT)
-var url = 'http://pulseatparkes.atnf.csiro.au/dev/dfb3_fold_stokes.gif?' + random;
+var url = 'http://pulseatparkes.atnf.csiro.au/dev/plots/dfb3_fold_stokes.gif?' + random;
 img.src = url;
 document.getElementById('dfb3_fold_stokes').src = url;
 
 // PDFB3 fold plot: time vs phase (pav -YFp)
-url = 'http://pulseatparkes.atnf.csiro.au/dev/dfb3_fold_time.gif?' + random;
+url = 'http://pulseatparkes.atnf.csiro.au/dev/plots/dfb3_fold_time.gif?' + random;
 img.src = url;
 document.getElementById('dfb3_fold_time').src = url;
 
 // PDFB3 fold plot: frequency vs time (pav -GTp)
-url = 'http://pulseatparkes.atnf.csiro.au/dev/dfb3_fold_freq.gif?' + random;
+url = 'http://pulseatparkes.atnf.csiro.au/dev/plots/dfb3_fold_freq.gif?' + random;
 img.src = url;
 document.getElementById('dfb3_fold_freq').src = url;
 
 // PDFB3 fold plot: bandpass (pav -BTp)
-url = 'http://pulseatparkes.atnf.csiro.au/dev/dfb3_bandpass.gif?' + random;
+url = 'http://pulseatparkes.atnf.csiro.au/dev/plots/dfb3_bandpass.gif?' + random;
 img.src = url;
 document.getElementById('dfb3_bandpass').src = url;
 
-var ADDRESS = 'http://pulseatparkes.atnf.csiro.au/dev/';
+var ADDRESS = 'http://pulseatparkes.atnf.csiro.au/dev/plots/';
 
 //$('#temp').html(Math.random());
 
