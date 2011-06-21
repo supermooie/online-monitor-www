@@ -1,7 +1,7 @@
 var refresh_rate = 5;
 var sleep = 0;
 
-var is_p456 = 0;
+//var is_p456 = 0;
 
 // Hides the default main (big) DFB3 and DFB4 images.
 function HideDefaults()
@@ -28,7 +28,7 @@ function HandleButtonset()
   $("#radio").buttonset();
 }
 
-function HandleProgressbar()
+/*function HandleProgressbar()
 {
   if (is_p456) {
     $.get('get_observation_progress.php?obs_type=dfb3_fold', function(data) {
@@ -37,22 +37,22 @@ function HandleProgressbar()
   } else {
     $("#pb1").html('');
   }
-}
+}*/
 
 function HandleSlider()
 {
     $( "#slider" ).slider({
-      value:4,
+      value: 2,
       min: 1,
       max: 10,
       step: 1,
       slide: function( event, ui ) {
         refresh_rate = ui.value;
         var seconds_string = ui.value == 1 ? "second" : "seconds";
-        $( "#amount" ).text( "Refresh every " + ui.value + " " + seconds_string );
+        $("#amount" ).text( "Update rate (s): " + ui.value);
       }
     });
-    $( "#amount" ).text( "Refresh every " + $( "#slider" ).slider( "value" ) + " seconds" );
+    $("#amount" ).text( "Update rate (s): " + $( "#slider" ).slider( "value" ));
 }
 
 // Update observing statuses for DFB3 and DFB4.

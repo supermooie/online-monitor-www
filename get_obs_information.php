@@ -94,10 +94,27 @@ function GetDfbObsInformation($data_file)
 
     echo '<table border=1 class="gridtable" align="left">';
 
-    if ($data_file == 'dfb3_fold.dat') {
-      echo '<tr><th rowspan=8>D<br>F<br>B<br>3</th></tr>';
+    // Account all DFB3, DFB4, and their corresponding search modes.
+    /*if ($data_file == 'dfb3_fold.dat') {
     } else {
       echo '<tr><th rowspan=8>D<br>F<br>B<br>4</th></tr>';
+    }*/
+
+    switch ($data_file) {
+    case 'dfb3_fold.dat':
+      echo '<tr><th rowspan=8>D<br>F<br>B<br>3</th></tr>';
+      break;
+    case 'dfb4_fold.dat':
+      echo '<tr><th rowspan=8>D<br>F<br>B<br>4</th></tr>';
+      break;
+    case 'dfb3_search.dat':
+      echo '<tr><th rowspan=15>D<br>F<br>B<br>4</th></tr>';
+      break;
+    case 'dfb4_search.dat':
+      echo '<tr><th rowspan=15>D<br>F<br>B<br>4</th></tr>';
+      break;
+    default:
+      break;
     }
 
     $count = count($vap_fields);
