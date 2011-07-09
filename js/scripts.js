@@ -110,7 +110,8 @@ function UpdateObservingParameters()
 
 function GetCurrentProject()
 {
-  $('#schedule').load('get_projects.php');
+  $('#schedule_today').load('get_projects_today.php');
+  $('#schedule_tomorrow').load('get_projects_tomorrow.php');
 }
 
 function GetTimes()
