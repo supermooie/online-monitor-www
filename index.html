@@ -17,11 +17,20 @@
       <img id="pulsar" src="images/dish2.jpg" width="265px" height="70px" alt="parkes pic"/>
     </div>
 
-    <h1>
-      Parkes Online Monitor
-    </h1>
+    <div id="heading_box">
+      <h1>Parkes Online Monitor</h1>
+    </div> 
 
-  </div> 
+    <div id="times_box">
+      <h2>
+      <table>
+          <td> AEST: </td> <td> <div id="aest_time"></div> </td>
+          <td> | LMST: </td> <td> <div id="lmst_time"></div> </td>
+          <td> | UTC: </td> <td> <div id="utc_time"></div> </td>
+      </table>
+    </h2>
+    </div> 
+    <div class="clear"></div>
 
   <!--content-->
   <div id="content">
@@ -37,15 +46,6 @@
                 <tr><th>Backend</th><th>Status</th><th>Updated</th></tr>
                 <tr><td>PDFB3</td><td id="dfb3_observing_status"></td><td rowspan="2" id="observing_status_update_time"></td></tr>
                 <tr><td>PDFB4</td><td id="dfb4_observing_status"></td></tr>
-              </table>
-            </div>
-
-            <div class="inner-box-vert" id="inner-box-vert2">
-              <table class="gridtable">
-                <tr><th>Time Standard</th><th>Time</th></tr>
-                <tr><td>AEST</td><td><div id="aest_time"></div></td></tr>
-                <tr><td>UTC</td><td><div id="utc_time"></div></td></tr>
-                <tr><td>LMST</td><td><div id="lmst_time"></div></td></tr>
               </table>
             </div>
 

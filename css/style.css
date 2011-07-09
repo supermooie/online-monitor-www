@@ -42,6 +42,15 @@ h5 {
   margin-left: 130px;
   float: left; 
 }
+#heading_box {
+  float: left;
+}
+
+#times_box {
+  padding-top: 20px;
+  padding-left: 40px;
+  float: left;
+}
 
 #logo {
   height: 70px;
