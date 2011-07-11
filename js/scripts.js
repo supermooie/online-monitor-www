@@ -1,6 +1,76 @@
 var refresh_rate = 5;
 var sleep = 0;
 
+function GetTelescopeInformation()
+{
+  /*
+$keys = array(                                                                                                                                                                  
+  'AEST',                                                                                                                                                                       
+  'LMST',                                                                                                                                                                       
+  'DEC',                                                                                                                                                                        
+  'RA',
+  'RX',                                                                                                                                                                         
+  'CONTROLLER',                                                                                                                                                                 
+  'FSTAT',                                                                                                                                                                    
+  'T_SET',                                                                                                                                                                      
+  'WD_SPD',                                                                                                                                                                     
+  'WindAvg10s',                                                                                                                                                                 
+  'WindMax1m',                                                                                                                                                                  
+  'WindDir15m'                                                                                                                                                                  
+);    */
+ 
+  $.getJSON('get_telescope_information.php', function(data) {
+      var items = [];
+
+      $.each(data, function(key, val) {
+          switch(key) {
+            case 'RA':
+            $('#ra').text(val);
+            break;
+
+            case 'DEC':
+            $('#dec').text(val);
+            break;
+
+            case 'RX':
+            $('#rx').text(val);
+            break;
+
+            case 'T_SET':
+            $('#t_set').text(val);
+            break;
+
+            case 'WD_SPD':
+            $('#wd_spd').text(val);
+            break;
+
+            case 'AEST':
+            $('#aest_time').text(val);
+            break;
+
+            case 'LMST':
+            $('#lmst_time').text(val);
+            break;
+
+            case 'FSTAT':
+              var message = val;
+              if (val == "DISH") {
+                message = "DISH IS STATIONARY";
+              } else if (val == "SLEWING") {
+                message = "SLEWING TO NEW COORDINATE";
+              }
+              $('#fstat').text(message);
+            break;
+          }
+      });
+
+      //alert(items);
+
+      //alert(data);
+      //$('#debug').text(data);
+    });
+}
+
 //var is_p456 = 0;
 
 // Hides the default main (big) DFB3 and DFB4 images.
@@ -53,14 +123,6 @@ function HandleSlider()
       }
     });
     $("#amount" ).text( "Update rate (s): " + $( "#slider" ).slider( "value" ));
-}
-
-// Update observing statuses for DFB3 and DFB4.
-function UpdateObservingStatuses()
-{
-  $('#dfb3_observing_status').load('get_obs_status.php?dfb=3');
-  $('#dfb4_observing_status').load('get_obs_status.php?dfb=4');
-  $('#observing_status_update_time').load('get_obs_status_update_time.php');
 }
 
 // Updates latest plots if backend is currently shown.
@@ -116,9 +178,9 @@ function GetCurrentProject()
 
 function GetTimes()
 {
-  $('#lmst_time').load('get_current_lmst.php');
-  $('#aest_time').load('get_current_aest.php');
-  $('#utc_time').load('get_current_utc.php');
+  //$('#lmst_time').load('get_current_lmst.php');
+  //$('#aest_time').load('get_current_aest.php');
+  //$('#utc_time').load('get_current_utc.php');
 }
 
 
@@ -156,9 +218,12 @@ $(document).ready(function() {
     setInterval(function() {
         UpdatePlots();
         UpdateObservingParameters();
-        UpdateObservingStatuses();
         HandleProgressbar();
       }, 5000);
+
+    setInterval(function() {
+      GetTelescopeInformation();
+    }, 1000);
 
     setInterval(function() {
         GetCurrentProject();
@@ -306,7 +371,6 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     HideDefaults();
-    UpdateObservingStatuses();
     UpdatePlots();
     UpdateWebcamImage();
     UpdateObservingParameters();
@@ -316,4 +380,5 @@ $(document).ready(function() {
     HandleSlider();
     HandleProgressbar();
     HandleButtonset();
+    GetTelescopeInformation();
 });

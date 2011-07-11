@@ -8,9 +8,9 @@
 <link href="css/jquery.tabs.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 
-</head> 
+</head>
 
-<body> 
+<body>
   <!--header-->
   <div id="header">
     <div id="logo">
@@ -19,34 +19,50 @@
 
     <div id="heading_box">
       <h1>Parkes Online Monitor</h1>
-    </div> 
+    </div>
 
     <div id="times_box">
       <h2>
       <table>
           <td> AEST: </td> <td> <div id="aest_time"></div> </td>
           <td> | LMST: </td> <td> <div id="lmst_time"></div> </td>
-          <td> | UTC: </td> <td> <div id="utc_time"></div> </td>
       </table>
     </h2>
-    </div> 
+    </div>
     <div class="clear"></div>
+
+    <div class="box">
+      <div id="debug"></div>
+    </div>
 
   <!--content-->
   <div id="content">
+
+    <div class="box">
+        <h2>
+          <table>
+            <td>Status: </td><td><div id="fstat"></div></td>
+          </table>
+
+          <table style="padding-top: 20px;">
+            <td>Time to set: </td><td><div id="t_set"></div></td>
+            <td> | Wind (km/h): </td><td><div id="wd_spd"></div></td>
+            <td> | Receiver: </td><td><div id="rx"></div></td>
+          </table>
+
+          <table style="padding-top: 5px;">
+            <td>RA: </td><td><div id="ra"></div></td>
+            <td> | DEC: </td><td><div id="dec"></div></td>
+          </table>
+        </h2>
+    </div>
+
+    <div class="clear"></div>
 
     <!--details box-->
     <div class="box" id="box1">
       <div class="inner-box" id="inner-box1">
         <div class="obs-box" id="obs-box1">
-
-            <div class="inner-box-vert" id="inner-box-vert1">
-              <table class="gridtable">
-                <tr><th>Backend</th><th>Status</th><th>Updated</th></tr>
-                <tr><td>PDFB3</td><td id="dfb3_observing_status"></td><td rowspan="2" id="observing_status_update_time"></td></tr>
-                <tr><td>PDFB4</td><td id="dfb4_observing_status"></td></tr>
-              </table>
-            </div>
 
             <div class="inner-box-vert" id="inner-box-vert3">
               <div id="schedule_today"></div>
