@@ -44,7 +44,7 @@ foreach ($matches[0] as $m) {
 }
 
 echo '<table class="gridtable">';
-echo "<th colspan=\"3\">Today $today</th>";
+echo "<th colspan=\"3\">Today $today<sup><a href=\"#\" class=\"help-link\" id=\"help-today\"><span class=\"help-icon\">?</span></a></sup></th>";
 echo '<tr><th>Start </th><th>End </th><th>Project</th></tr>';
 
 $current_time = time();

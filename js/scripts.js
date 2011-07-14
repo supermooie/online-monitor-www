@@ -12,6 +12,8 @@ function HideDefaults()
   $('#dfb4_search_main').hide();
   $('#webcam_big').hide();
   $('#help').hide();
+  //added 10/7/11 LT
+  $('.help-toggle').hide();
 }
 
 function HandleTabs()
@@ -304,6 +306,28 @@ $(document).ready(function() {
     $('#webcam-box').draggable();
 });
 
+//Toggle Help boxes - added 10/7/11 LT
+function ToggleHelpBoxes() {
+
+    $('.help-link').click(function() {
+
+      var linkId = this.id;
+
+      //show
+      $('#' + linkId + '-text').fadeIn();
+
+      //hide
+      $('#' + linkId + '-link').click(function() {
+        $('#' + linkId + '-text').hide();
+        return false;
+        });
+
+    return false;
+    });
+
+}
+
+
 $(document).ready(function() {
     HideDefaults();
     UpdateObservingStatuses();
@@ -314,6 +338,7 @@ $(document).ready(function() {
     GetTimes();
     HandleTabs();
     HandleSlider();
-    HandleProgressbar();
+    //HandleProgressbar();
     HandleButtonset();
+    ToggleHelpBoxes();
 });

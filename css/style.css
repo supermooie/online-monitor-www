@@ -3,7 +3,7 @@
 *  style3.css - stylesheet for     *
 *  index3.html			   *
 *				   *
-*  Edited 11/10/10 L.Toomey        *
+*  Edited 10/7/11 LT        *
 *				   *
 ***********************************/
 
@@ -230,5 +230,49 @@ abbr[title], acronym[title] {
         text-align:center;
 }
 
+/* help divs */
 
+.help-link {
+float: right;
+/*margin-left: 5px;*/
+}
 
+/*.title {
+float: left;
+padding: 6.5px;
+text-align: center;
+}*/
+
+/*.help-div {
+float: right;
+padding: 6.5px;
+border-left: 1px solid #666666;
+/*margin-left: 10px;
+color: blue;
+}*/
+
+.help-icon {
+color: #27537A;
+font-size: 11px;
+}
+
+.help-toggle {
+padding: 10px;
+color: #C2C2C2;
+width: 600px;
+border: 1px solid #666666;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+}
+
+.close-div {
+padding: 2px;
+float: right;
+}
+
+.close-div a {
+color: red;
+}
+
+/* end help divs */
