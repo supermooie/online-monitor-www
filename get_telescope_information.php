@@ -18,6 +18,7 @@ $keys = array(
   'FSTAT',
   'T_SET',
   'WD_SPD',
+  'DRV_TIME',
   'WindAvg10s',
   'WindMax1m',
   'WindDir15m'

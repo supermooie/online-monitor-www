@@ -23,17 +23,12 @@
 
     <div id="times_box">
       <h2>
-      <table>
-          <td> AEST: </td> <td> <div id="aest_time"></div> </td>
-          <td> | LMST: </td> <td> <div id="lmst_time"></div> </td>
-      </table>
+          <table>
+            <td>Telescope Status: </td><td><div id="fstat"></div></td><td><div id="drv_time"></td>
+          </table>
     </h2>
     </div>
     <div class="clear"></div>
-
-    <div class="box">
-      <div id="debug"></div>
-    </div>
 
   <!--content-->
   <div id="content">
@@ -41,16 +36,14 @@
     <div class="box">
         <h2>
           <table>
-            <td>Status: </td><td><div id="fstat"></div></td>
-          </table>
-
-          <table style="padding-top: 20px;">
-            <td>Time to set: </td><td><div id="t_set"></div></td>
+            <td> AEST: </td> <td> <div id="aest_time"></div> </td>
+            <td> | LMST: </td> <td> <div id="lmst_time"></div> </td>
+            <td> | Time to set: </td><td><div id="t_set"></div></td>
             <td> | Wind (km/h): </td><td><div id="wd_spd"></div></td>
             <td> | Receiver: </td><td><div id="rx"></div></td>
           </table>
 
-          <table style="padding-top: 5px;">
+          <table>
             <td>RA: </td><td><div id="ra"></div></td>
             <td> | DEC: </td><td><div id="dec"></div></td>
           </table>
@@ -58,24 +51,6 @@
     </div>
 
     <div class="clear"></div>
-
-    <!--details box-->
-    <div class="box" id="box1">
-      <div class="inner-box" id="inner-box1">
-        <div class="obs-box" id="obs-box1">
-
-            <div class="inner-box-vert" id="inner-box-vert3">
-              <div id="schedule_today"></div>
-            </div>
-
-            <div class="inner-box-vert" id="inner-box-vert4">
-              <div id="schedule_tomorrow"></div>
-            </div>
-
-          <div class="clear"></div>
-        </div>
-      </div>
-    </div>
 
     <div class="box">
       <div id="pb1"</div>
@@ -438,20 +413,28 @@
     </div>
   </div>
 
-  <!--webcam-->
-  <div class="box" id="box5">
-    <div id="webcam-box">
-      <img id="parkes_webcam" />
+  <div id="webcam-box">
+    <img id="parkes_webcam" />
 
-      <p>
-      <div id="amount"></div>
-      <div id="slider"></div>
-      </p>
-
-    </div>
-    <div class="clear"></div>
+    <div id="amount"></div>
+    <div id="slider"></div>
   </div>
-</div>
+
+  <!--details box-->
+  <div class="box" id="box1">
+    <div class="inner-box" id="inner-box1">
+      <div class="inner-box-vert">
+        <div id="schedule_today"></div>
+      </div>
+
+      <div class="inner-box-vert" id="inner-box-vert4">
+        <div id="schedule_tomorrow"></div>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+  </div>
+
 
 <!--footer-->
 <div id="footer">

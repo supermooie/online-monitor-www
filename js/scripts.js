@@ -3,22 +3,6 @@ var sleep = 0;
 
 function GetTelescopeInformation()
 {
-  /*
-$keys = array(                                                                                                                                                                  
-  'AEST',                                                                                                                                                                       
-  'LMST',                                                                                                                                                                       
-  'DEC',                                                                                                                                                                        
-  'RA',
-  'RX',                                                                                                                                                                         
-  'CONTROLLER',                                                                                                                                                                 
-  'FSTAT',                                                                                                                                                                    
-  'T_SET',                                                                                                                                                                      
-  'WD_SPD',                                                                                                                                                                     
-  'WindAvg10s',                                                                                                                                                                 
-  'WindMax1m',                                                                                                                                                                  
-  'WindDir15m'                                                                                                                                                                  
-);    */
- 
   $.getJSON('get_telescope_information.php', function(data) {
       var items = [];
 
@@ -44,6 +28,14 @@ $keys = array(
             $('#wd_spd').text(val);
             break;
 
+            case 'DRV_TIME':
+              var message = "";
+              if (val != "0.0") {
+                message = " | Slew time (m): " + val;
+              }
+              $('#drv_time').text(message);
+            break;
+
             case 'AEST':
             $('#aest_time').text(val);
             break;
@@ -54,7 +46,7 @@ $keys = array(
 
             case 'FSTAT':
               var message = val;
-              if (val == "DISH") {
+              if (val == "DISH" || val == "SOURCE") {
                 message = "DISH IS STATIONARY";
               } else if (val == "SLEWING") {
                 message = "SLEWING TO NEW COORDINATE";
@@ -80,7 +72,6 @@ function HideDefaults()
   $('#dfb4_main').hide();
   $('#dfb3_search_main').hide();
   $('#dfb4_search_main').hide();
-  $('#webcam_big').hide();
   $('#help').hide();
 }
 
@@ -189,17 +180,6 @@ $(document).ready(function() {
 
     $('a#help_toggle').click(function() {
       $('#help').toggle("fast");
-      return false;
-      });
-
-    $('a#webcam_big_toggle').click(function() {
-
-      $('#parkes_webcam').toggle(function() {
-        $(this).attr("src", "http://outreach.atnf.csiro.au/visiting/parkes/webcam/parkes.full.jpg?" + Math.random());
-        }, function() {
-          $(this).attr("src", "http://outreach.atnf.csiro.au/visiting/parkes/webcam/parkes.med.jpg?" + Math.random());
-        });
-
       return false;
       });
 
