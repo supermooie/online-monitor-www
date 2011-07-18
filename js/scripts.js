@@ -354,21 +354,7 @@ $(document).ready(function() {
 //Toggle Help boxes - added 10/7/11 LT
 function ToggleHelpBoxes() {
 
-    $('.help-link').click(function() {
-
-      var linkId = this.id;
-
-      //show
-      $('#' + linkId + '-text').fadeIn();
-
-      //hide
-      $('#' + linkId + '-link').click(function() {
-        $('#' + linkId + '-text').hide();
-        return false;
-        });
-
-    return false;
-    });
+  $.getScript('toggle_help_boxes.js');
 
 }
 

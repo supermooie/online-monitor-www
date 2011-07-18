@@ -61,9 +61,9 @@ function GetApsrObsInformation($data_file)
     echo '<table class="gridtable" align="left">';
 
     if ($data_file == 'apsr_obs.info') {
-      echo '<tr><th rowspan=7>A<br>P<br>S<br>R</th></tr>';
+      echo '<tr><th rowspan=7><sup><a href="#" class="help-link" id="help-apsr" title="What is APSR?"><span class="help-icon">?</span></a></sup><br/>A<br>P<br>S<br>R</th></tr>';
     } else {
-      echo '<tr><th rowspan=7>C<br>A<br>S<br>P<br>S<br>R</th></tr>';
+      echo '<tr><th rowspan=7><sup><a href="#" class="help-link" id="help-caspsr" title="What is CASPSR?"><span class="help-icon">?</span></a></sup><br/>C<br>A<br>S<br>P<br>S<br>R</th></tr>';
     }
 
     for ($i = 3; $i <= 8; $i++) {
@@ -102,16 +102,16 @@ function GetDfbObsInformation($data_file)
 
     switch ($data_file) {
     case 'dfb3_fold.dat':
-      echo '<tr><th rowspan=8>D<br>F<br>B<br>3</th></tr>';
+      echo '<tr><th rowspan=8><sup><a href="#" class="help-link" id="help-dfb3fold" title="What is DFB3 fold mode?"><span class="help-icon">?</span></a></sup><br/>D<br/>F<br/>B<br/>3</th></tr>';
       break;
     case 'dfb4_fold.dat':
-      echo '<tr><th rowspan=8>D<br>F<br>B<br>4</th></tr>';
+      echo '<tr><th rowspan=8><sup><a href="#" class="help-link" id="help-dfb4fold" title="What is DFB4 fold mode?"><span class="help-icon">?</span></a></sup><br/>D<br/>F<br/>B<br/>4</th></tr>';
       break;
     case 'dfb3_search.dat':
-      echo '<tr><th rowspan=15>D<br>F<br>B<br>4</th></tr>';
+      echo '<tr><th rowspan=15><sup><a href="#" class="help-link" id="help-dfb3search" title="What is DFB3 search mode?"><span class="help-icon">?</span></a></sup><br/>D<br>F<br>B<br>4</th></tr>';
       break;
     case 'dfb4_search.dat':
-      echo '<tr><th rowspan=15>D<br>F<br>B<br>4</th></tr>';
+      echo '<tr><th rowspan=15><sup><a href="#" class="help-link" id="help-dfb4search" title="What is DFB4 search mode?"><span class="help-icon">?</span></a></sup><br/>D<br>F<br>B<br>4</th></tr>';
       break;
     default:
       break;
@@ -135,5 +135,8 @@ function GetDfbObsInformation($data_file)
     echo '</table>';
   }
 }
+
+//load jquery (added LT 17/7/11)
+echo "<script type='text/javascript'> $.getScript('js/toggle_help_boxes.js'); </script>";
 
 ?>
