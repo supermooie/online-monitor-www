@@ -8,9 +8,9 @@
 <link href="css/jquery.tabs.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 
-</head> 
+</head>
 
-<body> 
+<body>
   <!--header-->
   <div id="header">
     <div id="logo">
@@ -19,10 +19,11 @@
 
     <div id="heading_box">
       <h1>Parkes Online Monitor</h1>
-    </div> 
+    </div>
 
     <div id="times_box">
       <h2>
+<!--<<<<<<< HEAD
       <table>
           <td> AEST: </td> <td> <div id="aest_time"></div> </td>
           <td> | LMST: </td> <td> <div id="lmst_time"></div> </td>
@@ -33,6 +34,13 @@
       </h2>
     </div>
 
+=======-->
+          <table>
+            <td>Telescope Status: </td><td><div id="fstat"></div></td><td><div id="drv_time"></td>
+          </table>
+    </h2>
+    </div>
+<!-->>>>>>> upstream/master-->
     <div class="clear"></div>
   </div>
 
@@ -47,6 +55,7 @@
   <!--content-->
   <div id="content">
 
+<!--<<<<<<< HEAD
     <!--details box-->
     <div class="box" id="box1">
       <div class="inner-box" id="inner-box1">
@@ -89,7 +98,26 @@
 
         </div>
       </div>
+=======-->
+    <div class="box">
+        <h2>
+          <table>
+            <td> AEST: </td> <td> <div id="aest_time"></div> </td>
+            <td> | LMST: </td> <td> <div id="lmst_time"></div> </td>
+            <td> | Time to set: </td><td><div id="t_set"></div></td>
+            <td> | Wind (km/h): </td><td><div id="wd_spd"></div></td>
+            <td> | Receiver: </td><td><div id="rx"></div></td>
+          </table>
+
+          <table>
+            <td>RA: </td><td><div id="ra"></div></td>
+            <td> | DEC: </td><td><div id="dec"></div></td>
+          </table>
+        </h2>
+<!-->>>>>>> upstream/master-->
     </div>
+
+    <div class="clear"></div>
 
     <div class="box">
       <div id="pb1"</div>
@@ -518,20 +546,28 @@ rus pretium.</p>
     </div>
   </div>
 
-  <!--webcam-->
-  <div class="box" id="box5">
-    <div id="webcam-box">
-      <img id="parkes_webcam" />
+  <div id="webcam-box">
+    <img id="parkes_webcam" />
 
-      <p>
-      <div id="amount"></div>
-      <div id="slider"></div>
-      </p>
-
-    </div>
-    <div class="clear"></div>
+    <div id="amount"></div>
+    <div id="slider"></div>
   </div>
-</div>
+
+  <!--details box-->
+  <div class="box" id="box1">
+    <div class="inner-box" id="inner-box1">
+      <div class="inner-box-vert">
+        <div id="schedule_today"></div>
+      </div>
+
+      <div class="inner-box-vert" id="inner-box-vert4">
+        <div id="schedule_tomorrow"></div>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+  </div>
+
 
 <!--footer-->
 <div id="footer">
@@ -542,6 +578,7 @@ rus pretium.</p>
   </div>
 </div>
 
+<!--<<<<<<< HEAD
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
   <script src="http://jquery.com/files/social/js/jquery.tabs.js"></script>
@@ -559,6 +596,25 @@ rus pretium.</p>
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
      })();
   </script>
+=======-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="http://jquery.com/files/social/js/jquery.tabs.js"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/jquery.progressbar.js"></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17026468-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+   })();
+ </script>
+<!-->>>>>>> upstream/master-->
 
 </body> 
 </html>

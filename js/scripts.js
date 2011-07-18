@@ -1,6 +1,68 @@
 var refresh_rate = 5;
 var sleep = 0;
 
+function GetTelescopeInformation()
+{
+  $.getJSON('get_telescope_information.php', function(data) {
+      var items = [];
+
+      $.each(data, function(key, val) {
+          switch(key) {
+            case 'RA':
+            $('#ra').text(val);
+            break;
+
+            case 'DEC':
+            $('#dec').text(val);
+            break;
+
+            case 'RX':
+            $('#rx').text(val);
+            break;
+
+            case 'T_SET':
+            $('#t_set').text(val);
+            break;
+
+            case 'WD_SPD':
+            $('#wd_spd').text(val);
+            break;
+
+            case 'DRV_TIME':
+              var message = "";
+              if (val != "0.0") {
+                message = " | Slew time (m): " + val;
+              }
+              $('#drv_time').text(message);
+            break;
+
+            case 'AEST':
+            $('#aest_time').text(val);
+            break;
+
+            case 'LMST':
+            $('#lmst_time').text(val);
+            break;
+
+            case 'FSTAT':
+              var message = val;
+              if (val == "DISH" || val == "SOURCE") {
+                message = "DISH IS STATIONARY";
+              } else if (val == "SLEWING") {
+                message = "SLEWING TO NEW COORDINATE";
+              }
+              $('#fstat').text(message);
+            break;
+          }
+      });
+
+      //alert(items);
+
+      //alert(data);
+      //$('#debug').text(data);
+    });
+}
+
 //var is_p456 = 0;
 
 // Hides the default main (big) DFB3 and DFB4 images.
@@ -10,7 +72,6 @@ function HideDefaults()
   $('#dfb4_main').hide();
   $('#dfb3_search_main').hide();
   $('#dfb4_search_main').hide();
-  $('#webcam_big').hide();
   $('#help').hide();
   //added 10/7/11 LT
   $('.help-toggle').hide();
@@ -55,14 +116,6 @@ function HandleSlider()
       }
     });
     $("#amount" ).text( "Update rate (s): " + $( "#slider" ).slider( "value" ));
-}
-
-// Update observing statuses for DFB3 and DFB4.
-function UpdateObservingStatuses()
-{
-  $('#dfb3_observing_status').load('get_obs_status.php?dfb=3');
-  $('#dfb4_observing_status').load('get_obs_status.php?dfb=4');
-  $('#observing_status_update_time').load('get_obs_status_update_time.php');
 }
 
 // Updates latest plots if backend is currently shown.
@@ -118,9 +171,9 @@ function GetCurrentProject()
 
 function GetTimes()
 {
-  $('#lmst_time').load('get_current_lmst.php');
-  $('#aest_time').load('get_current_aest.php');
-  $('#utc_time').load('get_current_utc.php');
+  //$('#lmst_time').load('get_current_lmst.php');
+  //$('#aest_time').load('get_current_aest.php');
+  //$('#utc_time').load('get_current_utc.php');
 }
 
 
@@ -129,17 +182,6 @@ $(document).ready(function() {
 
     $('a#help_toggle').click(function() {
       $('#help').toggle("fast");
-      return false;
-      });
-
-    $('a#webcam_big_toggle').click(function() {
-
-      $('#parkes_webcam').toggle(function() {
-        $(this).attr("src", "http://outreach.atnf.csiro.au/visiting/parkes/webcam/parkes.full.jpg?" + Math.random());
-        }, function() {
-          $(this).attr("src", "http://outreach.atnf.csiro.au/visiting/parkes/webcam/parkes.med.jpg?" + Math.random());
-        });
-
       return false;
       });
 
@@ -158,9 +200,12 @@ $(document).ready(function() {
     setInterval(function() {
         UpdatePlots();
         UpdateObservingParameters();
-        UpdateObservingStatuses();
         HandleProgressbar();
       }, 5000);
+
+    setInterval(function() {
+      GetTelescopeInformation();
+    }, 1000);
 
     setInterval(function() {
         GetCurrentProject();
@@ -330,7 +375,6 @@ function ToggleHelpBoxes() {
 
 $(document).ready(function() {
     HideDefaults();
-    UpdateObservingStatuses();
     UpdatePlots();
     UpdateWebcamImage();
     UpdateObservingParameters();
@@ -341,4 +385,5 @@ $(document).ready(function() {
     //HandleProgressbar();
     HandleButtonset();
     ToggleHelpBoxes();
+    GetTelescopeInformation();
 });
