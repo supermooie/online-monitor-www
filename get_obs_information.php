@@ -136,4 +136,7 @@ function GetDfbObsInformation($data_file)
   }
 }
 
+//load jquery (added LT 17/7/11)
+echo "<script type='text/javascript'> $.getScript('js/toggle_help_boxes.js'); </script>";
+
 ?>
