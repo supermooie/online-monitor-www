@@ -3,7 +3,7 @@
 *  style3.css - stylesheet for     *
 *  index3.html			   *
 *				   *
-*  Edited 10/7/11 LT        *
+*  Edited 21/7/11 LT               *
 *				   *
 ***********************************/
 
@@ -46,8 +46,15 @@ h5 {
   float: left;
 }
 
+.status_table {
+padding: 0;
+margin: 0;
+font-size: 137.5%;
+line-height: 1.1;
+}
+
 #times_box {
-  padding-top: 20px;
+  padding-top: 35px;
   padding-left: 40px;
   float: left;
 }
@@ -88,6 +95,9 @@ h5 {
   color:gray;
 }
 
+.tabs-nav {
+width: 400px;
+}
 
 /******* Table styles ******/
 
@@ -138,6 +148,7 @@ tr.tomorrow {
 
 .box {
   background-color: #303030;
+  margin-bottom: 5px;
 }
 
 .inner-box-vert {
@@ -159,9 +170,12 @@ tr.tomorrow {
   float: left;
 }
 
+.obs_data {
+float: left;
+}
 
 #webcam-box {
-  margin: 5px 0px 5px 0px;
+  margin: 5px 5px 5px 0px;
   color: #C2C2C2;
   float: left;
 }
@@ -232,28 +246,33 @@ abbr[title], acronym[title] {
 
 /* help divs */
 
-.help-link {
+#help-all {
 float: right;
-/*margin-left: 5px;*/
+margin-top: 50px;
+margin-right: 20px;
 }
 
-/*.title {
-float: left;
-padding: 6.5px;
-text-align: center;
-}*/
-
-/*.help-div {
+.help-link {
 float: right;
-padding: 6.5px;
-border-left: 1px solid #666666;
-/*margin-left: 10px;
-color: blue;
-}*/
+margin: 0 5px 0 5px;
+}
+
+.backend, #help-schedules {
+float: left;
+margin-left: 0px;
+}
 
 .help-icon {
-color: #27537A;
-font-size: 11px;
+font-weight: bold;
+display: none;
+color: green;
+font-size: 12px;
+}
+
+#help-icon {
+font-weight: bold;
+color: green;
+font-size: 14px;
 }
 
 .help-toggle {

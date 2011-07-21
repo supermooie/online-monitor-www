@@ -12,7 +12,7 @@
 
 <body>
   <!--header-->
-  <div id="header">
+  <div class="box" id="header">
     <div id="logo">
       <img id="pulsar" src="images/dish2.jpg" width="265px" height="70px" alt="parkes pic"/>
     </div>
@@ -22,133 +22,100 @@
     </div>
 
     <div id="times_box">
-      <h2>
-<!--<<<<<<< HEAD
-      <table>
-          <td> AEST: </td> <td> <div id="aest_time"></div> </td>
-          <td> | LMST: </td> <td> <div id="lmst_time"></div> </td>
-          <td> | UTC: </td> <td> <div id="utc_time"></div> </td> 
-          <!--help-icon added 10/7/11 LT-->
-          <td><sup><a href="#" class="help-link" id="help-time" title="explain the times"><span class="help-icon">?</span></a></sup> </td>
-      </table>
-      </h2>
+        <table class="status_table">
+          <tr>
+            <td>Telescope Status: </td><td><div id="fstat"></div></td><td><div id="drv_time"></div></td>
+            <!--help-icon added 18/7/11 LT-->
+            <td><a href="#" class="help-link" id="help-tscope" title="Explain telescope status"><span class="help-icon">?</span></a></td>
+          </tr>
+        </table>
     </div>
+ 
+    <!--main help-icon added 18/7/11 LT-->
+    <a href="#" id="help-all" title="Show help icons"><span id="help-icon">?</span></a>
 
-=======-->
-          <table>
-            <td>Telescope Status: </td><td><div id="fstat"></div></td><td><div id="drv_time"></td>
-          </table>
-    </h2>
-    </div>
-<!-->>>>>>> upstream/master-->
-    <div class="clear"></div>
   </div>
-
-    <!--help toggle added 10/7/11 LT-->
-    <div class="help-toggle" id="help-time-text">
-      <div class="close-div"><a id="help-time-link" href="#">x</a></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
-    </div>
-
-  <div class="clear"></div>  
 
   <!--content-->
   <div id="content">
 
-<!--<<<<<<< HEAD
-    <!--details box-->
-    <div class="box" id="box1">
-      <div class="inner-box" id="inner-box1">
-        <div class="obs-box" id="obs-box1">
-
-            <div class="inner-box-vert" id="inner-box-vert1">
-              <table class="gridtable">
-                <!--help-icon added 10/7/11 LT-->
-                <tr><th>Backend</th><th>Status</th><th>Updated<sup><a href="#" class="help-link" id="help-status"><span class="help-icon">?</span></a></sup> </th></tr>
-                <tr><td>PDFB3</td><td id="dfb3_observing_status"></td><td rowspan="2" id="observing_status_update_time"></td></tr>
-                <tr><td>PDFB4</td><td id="dfb4_observing_status"></td></tr>
-              </table>
-            </div>
-
-            <div class="inner-box-vert" id="inner-box-vert3">
-              <div id="schedule_today"></div>
-            </div>
-
-            <div class="inner-box-vert" id="inner-box-vert4">
-              <div id="schedule_tomorrow"></div>
-            </div>
-
-          <div class="clear"></div>
-
-          <!--help toggles added 10/7/11 LT-->
-          <div class="help-toggle" id="help-status-text">
-            <div class="close-div"><a id="help-status-link" href="#">x</a></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
-          </div>
-          
-          <div class="help-toggle" id="help-today-text">
-            <div class="close-div"><a id="help-today-link" href="#">x</a></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
-          </div>
-
-          <div class="help-toggle" id="help-tomorrow-text">
-            <div class="close-div"><a id="help-tomorrow-link" href="#">x</a></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
-          </div>
-
-        </div>
-      </div>
-=======-->
     <div class="box">
-        <h2>
-          <table>
-            <td> AEST: </td> <td> <div id="aest_time"></div> </td>
-            <td> | LMST: </td> <td> <div id="lmst_time"></div> </td>
-            <td> | Time to set: </td><td><div id="t_set"></div></td>
-            <td> | Wind (km/h): </td><td><div id="wd_spd"></div></td>
-            <td> | Receiver: </td><td><div id="rx"></div></td>
+          <table class="status_table">
+            <tr>
+              <td> AEST: </td> <td> <div id="aest_time"></div></td>
+              <td> | LMST: </td> <td> <div id="lmst_time"></div></td>
+              <td> | Time to set: </td><td><div id="t_set"></div></td>
+              <td> | Wind (km/h): </td><td><div id="wd_spd"></div></td>
+              <td> | Receiver: </td><td><div id="rx"></div></td>
+              <!--help-icon added 18/7/11 LT-->
+              <td><a href="#" class="help-link" id="help-time" title="Explain the times, wind and receiver status"><span class="help-icon">?</span></a></td>
+            </tr>
           </table>
 
-          <table>
-            <td>RA: </td><td><div id="ra"></div></td>
-            <td> | DEC: </td><td><div id="dec"></div></td>
+          <table class="status_table">
+            <tr>
+              <td>RA: </td><td><div id="ra"></div></td>
+              <td> | DEC: </td><td><div id="dec"></div></td>
+              <!--help-icon added 18/7/11 LT-->
+              <td><a href="#" class="help-link" id="help-coords" title="Explain RA and DEC"><span class="help-icon">?</span></a></td>
+            </tr>
           </table>
-        </h2>
-<!-->>>>>>> upstream/master-->
+
+        <div class="clear"></div>
+
+        <!--help toggles added 18/7/11 LT-->
+        <div class="help-toggle" id="help-tscope-text">
+          <div class="close-div"><a id="help-tscope-link" href="#">x</a></div>
+          <p></p>
+        </div>
+
+        <div class="help-toggle" id="help-time-text">
+          <div class="close-div"><a id="help-time-link" href="#">x</a></div>
+          <p></p>
+        </div>
+
+        <div class="help-toggle" id="help-coords-text">
+          <div class="close-div"><a id="help-coords-link" href="#">x</a></div>
+          <p></p>
+        </div>
     </div>
 
     <div class="clear"></div>
 
     <div class="box">
-      <div id="pb1"</div>
+      <div id="pb1"></div>
     </div>
 
     <!--dfb3 -->
     <div class="box" id="box2">
+
       <ul>
         <li><a href="#inner-box2"><span>DFB3 Fold Mode</span></a></li>
         <li><a href="#inner-box8"><span>DFB3 Search Mode</span></a></li>
       </ul>
-      
+
       <div class="inner-box" id="inner-box2">
 
         <div class="obs-box" id="dfb3-fold-box">
 
-          <div class="data-box" id="data-box2">
-            <div id="dfb3_obs_data"></div>
+          <div class="data-box" id="data-box2">  
+            <div class="obs_data" id="dfb3_obs_data"></div>
           </div>
+
+          <!--help-icon added 18/7/11 LT-->
+          <a href="#" class="help-link backend" id="help-dfb3-fold" title="What is DFB3 fold mode?"><span class="help-icon">?</span></a>
 
           <div class="plot-box" id="plot-box1">
             <table class="gridtable">
               <tr>
                 <th>
-                  <!--help-icon added 10/7/11 LT-->
-                  Flux Density vs Phase <sup><a href="#" class="help-link" id="help-flux-phase"><span class="help-icon">?</span></a></sup>
+                  <!--help-icon added 18/7/11 LT-->
+                  Flux Density vs Phase <a href="#" class="help-link" id="help-flux-phase" title="Explain the flux density/phase plot"><span class="help-icon">?</span></a>
                 </th>
               </tr>
               <tr>
                 <td>
-                  <a href="#" id="dfb3_fold_stokes_toggle"><img id="dfb3_fold_stokes" /></a>
+                  <a href="#" id="dfb3_fold_stokes_toggle"><img id="dfb3_fold_stokes" alt="Flux Density vs Phase" src=""/></a>
                 </td>
               </tr>
             </table>
@@ -158,13 +125,13 @@
             <table class="gridtable">
               <tr>
                 <th>
-                  <!--help-icon added 10/7/11 LT-->
-                  Time vs Phase <sup><a href="#" class="help-link" id="help-time-phase"><span class="help-icon">?</span></a></sup>
+                  <!--help-icon added 18/7/11 LT-->
+                  Time vs Phase <a href="#" class="help-link" id="help-time-phase" title="Explain the time/phase plot"><span class="help-icon">?</span></a>
                 </th>
               </tr>
               <tr>
                 <td>
-                  <a href="#" id="dfb3_fold_time_toggle"><img id="dfb3_fold_time" /></a>
+                  <a href="#" id="dfb3_fold_time_toggle"><img id="dfb3_fold_time" alt="Time vs Phase" src=""/></a>
                 </td>
               </tr>
             </table>
@@ -174,13 +141,13 @@
             <table class="gridtable">
               <tr>
                 <th>
-                  <!--help-icon added 10/7/11 LT-->
-                  Frequency vs Phase <sup><a href="#" class="help-link" id="help-freq-phase"><span class="help-icon">?</span></a></sup>
+                  <!--help-icon added 18/7/11 LT-->
+                  Frequency vs Phase <a href="#" class="help-link" id="help-freq-phase" title="Explain the frequency/phase plot"><span class="help-icon">?</span></a>
                 </th>
               </tr>
               <tr>
                 <td>
-                  <a href="#" id="dfb3_fold_freq_toggle"><img id="dfb3_fold_freq" /></a>
+                  <a href="#" id="dfb3_fold_freq_toggle"><img id="dfb3_fold_freq" alt="Frequency vs Phase" src=""/></a>
                 </td>
               </tr>
             </table>
@@ -190,13 +157,13 @@
             <table class="gridtable">
               <tr>
                 <th>
-                  <!--help-icon added 10/7/11 LT-->
-                  Bandpass <sup><a href="#" class="help-link" id="help-bandpass"><span class="help-icon">?</span></a></sup>
+                  <!--help-icon added 18/7/11 LT-->
+                  Bandpass <a href="#" class="help-link" id="help-bandpass" title="Explain the bandpass plot"><span class="help-icon">?</span></a>
                 </th>
               </tr>
               <tr>
                 <td>
-                  <a href="#" id="dfb3_bandpass_toggle"><img id="dfb3_bandpass" /></a>
+                  <a href="#" id="dfb3_bandpass_toggle"><img id="dfb3_bandpass" alt="Bandpass" src=""/></a>
                 </td>
               </tr>
             </table>
@@ -204,25 +171,30 @@
 
           <div class="clear"></div>
 
-          <!--help toggles added 10/7/11 LT-->
+          <!--help toggles added 18/7/11 LT-->
+          <div class="help-toggle" id="help-dfb3-fold-text">
+            <div class="close-div"><a id="help-dfb3-fold-link" href="#">x</a></div>
+            <p></p>
+          </div>
+
           <div class="help-toggle" id="help-flux-phase-text">
             <div class="close-div"><a id="help-flux-phase-link" href="#">x</a></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
+            <p></p>
           </div>
 
           <div class="help-toggle" id="help-time-phase-text">
             <div class="close-div"><a id="help-time-phase-link" href="#">x</a></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
+            <p></p>
           </div>
 
           <div class="help-toggle" id="help-freq-phase-text">
             <div class="close-div"><a id="help-freq-phase-link" href="#">x</a></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
+            <p></p>
           </div>
 
           <div class="help-toggle" id="help-bandpass-text">
             <div class="close-div"><a id="help-bandpass-link" href="#">x</a></div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
+            <p></p>
           </div>
 
         </div>
@@ -236,17 +208,20 @@
             <div id="dfb3_search_data"></div>
           </div>
 
+          <!--help-icon added 18/7/11 LT-->
+          <a href="#" class="help-link backend" id="help-dfb3-search" title="What is DFB3 search mode?"><span class="help-icon">?</span></a>
+
           <div class="plot-box" id="plot-box10">              
             <table class="gridtable">
               <tr>
                 <th>
-                  <!--help-icon added 10/7/11 LT-->
-                  Frequency vs Time <sup><a href="#" class="help-link" id="help-dfb3search-freq-time"><span class="help-icon">?</span></a></sup>
+                  <!--help-icon added 18/7/11 LT-->
+                  Frequency vs Time <a href="#" class="help-link" id="help-dfb3search-freq-time" title="Explain the frequency/time plot"><span class="help-icon">?</span></a>
                 </th>
               </tr>
               <tr>
                 <td>
-                  <a href="#" id="dfb3_search_freq_toggle"><img id="dfb3_search_freq" /></a>
+                  <a href="#" id="dfb3_search_freq_toggle"><img id="dfb3_search_freq" alt="Frequency vs Time" src=""/></a>
                 </td>
               </tr>
             </table>
@@ -256,47 +231,46 @@
             <table class="gridtable">
               <tr>
                 <th>
-                  <!--help-icon added 10/7/11 LT-->
-                  Digitiser Counts <sup><a href="#" class="help-link" id="help-dfb3-digitiser"><span class="help-icon">?</span></a></sup>
+                  <!--help-icon added 18/7/11 LT-->
+                  Digitiser Counts <a href="#" class="help-link" id="help-dfb3-digitiser" title="Explain the digitiser counts plot"><span class="help-icon">?</span></a>
                 </th>
               </tr>
               <tr>
                 <td>
-                  <a href="#" id="dfb3_search_hist_toggle"><img id="dfb3_search_hist"  /></a>
+                  <a href="#" id="dfb3_search_hist_toggle"><img id="dfb3_search_hist" alt="Digitiser Counts" src=""/></a>
                 </td>
               </tr>
             </table>
           </div>
 
           <div class="inner-box" id="inner-box10">
-            <a href="#" id="dfb3_search_toggle"><img id="dfb3_search_main" /></a>
+            <a href="#" id="dfb3_search_toggle"><img id="dfb3_search_main" alt="Main image" src=""/></a>
           </div>
 
           <div class="clear"></div>
+
+          <!--help toggles added 18/7/11 LT-->
+          <div class="help-toggle" id="help-dfb3-search-text">
+            <div class="close-div"><a id="help-dfb3-search-link" href="#">x</a></div>
+            <p></p>
+          </div>
+
+          <div class="help-toggle" id="help-dfb3search-freq-time-text">
+            <div class="close-div"><a id="help-dfb3search-freq-time-link" href="#">x</a></div>
+            <p></p>
+          </div>
+
+          <div class="help-toggle" id="help-dfb3-digitiser-text">
+            <div class="close-div"><a id="help-dfb3-digitiser-link" href="#">x</a></div>
+            <p></p>
+          </div>
+
         </div>
       </div>
-    </div>
+    <!--</div>-->
 
     <div class="inner-box" id="inner-box3">
-      <a href="#" id="dfb3_main_toggle"><img id="dfb3_main" /></a>
-    </div>
-
-    <!--help toggles added 10/7/11 LT-->
-    <div class="help-toggle" id="help-dfb3search-freq-time-text">
-      <div class="close-div"><a id="help-dfb3search-freq-time-link" href="#">x</a></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla.
- Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultri
-cies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus qui
-s tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet
-congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie
-pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Ali
-quam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis pu
-rus pretium.</p>
-      </div>
-
-    <div class="help-toggle" id="help-dfb3-digitiser-text">
-      <div class="close-div"><a id="help-dfb3-digitiser-link" href="#">x</a></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
+      <a href="#" id="dfb3_main_toggle"><img id="dfb3_main" alt="Main image" src=""/></a>
     </div>
 
   </div>
@@ -316,13 +290,14 @@ rus pretium.</p>
           <div id="dfb4_obs_data"></div>
         </div>
 
+        <!--help-icon added 18/7/11 LT-->
+      <a href="#" class="help-link backend" id="help-dfb4-fold" title="What is DFB4 fold mode?"><span class="help-icon">?</span></a>
+
         <div class="plot-box" id="plot-box4">
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <a href="#" id="dfb4_fold_stokes_toggle"><img id="dfb4_fold_stokes" /></a>
+                <a href="#" id="dfb4_fold_stokes_toggle"><img id="dfb4_fold_stokes" alt="Flux Density vs Phase" src=""/></a>
               </td>
             </tr>
           </table>
@@ -331,10 +306,8 @@ rus pretium.</p>
         <div class="plot-box" id="plot-box5">
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <a href="#" id="dfb4_fold_time_toggle"><img id="dfb4_fold_time" /></a>
+                <a href="#" id="dfb4_fold_time_toggle"><img id="dfb4_fold_time" alt="Time vs Phase" src=""/></a>
               </td>
             </tr>
           </table>
@@ -343,10 +316,8 @@ rus pretium.</p>
         <div class="plot-box" id="plot-box6">
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <a href="#" id="dfb4_fold_freq_toggle"><img id="dfb4_fold_freq" /></a>
+                <a href="#" id="dfb4_fold_freq_toggle"><img id="dfb4_fold_freq" alt="Frequency vs Phase" src=""/></a>
               </td>
             </tr>
           </table>
@@ -355,16 +326,21 @@ rus pretium.</p>
         <div class="plot-box">
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <a href="#" id="dfb4_bandpass_toggle"><img id="dfb4_bandpass" /></a>
+                <a href="#" id="dfb4_bandpass_toggle"><img id="dfb4_bandpass" alt="Bandpass" src=""/></a>
               </td>
             </tr>
           </table>
         </div>
 
         <div class="clear"></div>
+
+        <!--help toggles added 18/7/11 LT-->
+        <div class="help-toggle" id="help-dfb4-fold-text">
+          <div class="close-div"><a id="help-dfb4-fold-link" href="#">x</a></div>
+          <p></p>
+        </div>
+
       </div>
     </div>
 
@@ -377,17 +353,20 @@ rus pretium.</p>
           <div id="dfb4_search_data"></div>
         </div>
 
+        <!--help-icon added 18/7/11 LT-->
+        <a href="#" class="help-link backend" id="help-dfb4-search" title="What is DFB4 search mode?"><span class="help-icon">?</span></a>
+
         <div class="plot-box" id="plot-box12">
           <table class="gridtable">
             <tr>
               <th>
-                <!--help-icon added 10/7/11 LT-->
-                Frequency vs Time <sup><a href="#" class="help-link" id="help-dfb4search-freq-time"><span class="help-icon">?</span></a></sup>
+                <!--help-icon added 18/7/11 LT-->
+                Frequency vs Time <a href="#" class="help-link" id="help-dfb4search-freq-time" title="Explain the frequency/time plot"><span class="help-icon">?</span></a>
               </th>
             </tr>
             <tr>
               <td>
-                <a href="#" id="dfb4_search_freq_toggle"><img id="dfb4_search_freq" /></a>
+                <a href="#" id="dfb4_search_freq_toggle"><img id="dfb4_search_freq" alt="Frequency vs Time" src=""/></a>
               </td>
             </tr>
           </table>
@@ -397,48 +376,48 @@ rus pretium.</p>
           <table class="gridtable">
             <tr>
               <th>
-                <!--help-icon added 10/7/11 LT-->
-                Digitiser Counts <sup><a href="#" class="help-link" id="help-dfb4-digitiser"><span class="help-icon">?</span></a></sup>
+                <!--help-icon added 18/7/11 LT-->
+                Digitiser Counts <a href="#" class="help-link" id="help-dfb4-digitiser" title="Explain the digitiser counts plot"><span class="help-icon">?</span></a>
               </th>
             </tr>
             <tr>
               <td>
-                <a href="#" id="dfb4_search_hist_toggle"><img id="dfb4_search_hist" /></a>
+                <a href="#" id="dfb4_search_hist_toggle"><img id="dfb4_search_hist" alt="Digitiser Counts" src=""/></a>
               </td>
             </tr>
           </table>
         </div>
 
         <div class="inner-box" id="inner-box11">
-          <a href="#" id="dfb4_search_toggle"><img id="dfb4_search_main" /></a>
+          <a href="#" id="dfb4_search_toggle"><img id="dfb4_search_main" alt="Main image" src=""/></a>
         </div>
 
         <div class="clear"></div>
+       
+        <!--help toggles added 18/7/11 LT-->
+        <div class="help-toggle" id="help-dfb4-search-text">
+          <div class="close-div"><a id="help-dfb4-search-link" href="#">x</a></div>
+          <p></p>
+        </div>
+
+        <div class="help-toggle" id="help-dfb4search-freq-time-text">
+          <div class="close-div"><a id="help-dfb4search-freq-time-link" href="#">x</a></div>
+        <p></p>
+        </div>
+
+        <div class="help-toggle" id="help-dfb4-digitiser-text">
+          <div class="close-div"><a id="help-dfb4-digitiser-link" href="#">x</a></div>
+          <p></p>
+        </div>
+
       </div>
     </div>
-  </div>
-
-  <div class="inner-box" id="inner-box5">
-    <a href="#" id="dfb4_main_toggle"><img id="dfb4_main" /></a>
-  </div>
-
-  <!--help toggles added 10/7/11 LT-->
-    <div class="help-toggle" id="help-dfb4search-freq-time-text">
-      <div class="close-div"><a id="help-dfb4search-freq-time-link" href="#">x</a></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla.
- Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultri
-cies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus qui
-s tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet
-congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie
-pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Ali
-quam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis pu
-rus pretium.</p>
-      </div>
-
-    <div class="help-toggle" id="help-dfb4-digitiser-text">
-      <div class="close-div"><a id="help-dfb4-digitiser-link" href="#">x</a></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec mauris leo, eleifend consequat nulla. Nunc consequat fringilla lorem ac condimentum. Phasellus non dolor et nisi aliquam sollicitudin. Nullam consectetur ultricies mollis. Etiam lobortis arcu enim, ac auctor lorem. Donec vel lacus et felis eleifend vulputate. Integer non risus quis tortor convallis hendrerit et vitae ipsum. Mauris venenatis varius vulputate. Vestibulum risus sapien, aliquam sit amet congue quis, pellentesque sit amet nibh. Nunc pulvinar tincidunt risus ac fringilla. Nulla eget lorem eget augue molestie pellentesque. Nam id nisi purus, id egestas ipsum. Quisque dignissim orci a risus pharetra eu vulputate nulla dapibus. Aliquam laoreet porttitor ipsum, vitae consequat tortor facilisis eget. Fusce convallis enim et augue vehicula eu lobortis purus pretium.</p>
+  
+    <div class="inner-box" id="inner-box5">
+      <a href="#" id="dfb4_main_toggle"><img id="dfb4_main" alt="Main image" src=""/></a>
     </div>
+ 
+  </div>
 
   <!--apsr mode-->
   <div class="box" id="box4">
@@ -447,12 +426,15 @@ rus pretium.</p>
         <div class="data-box" id="data-box4">
           <div id="apsr_obs_data"></div>
         </div>
+
+        <!--help-icon added 18/7/11 LT-->
+        <a href="#" class="help-link backend" id="help-apsr" title="What is APSR?"><span class="help-icon">?</span></a>
+
         <div class="plot-box" id="plot-box7">               
           <table class="gridtable">
-            </tr>
             <tr>
               <td>
-                <img id="apsr_flux" />
+                <img id="apsr_flux" alt="Flux Density vs Phase" src=""/>
               </td>
             </tr>
           </table>
@@ -461,10 +443,8 @@ rus pretium.</p>
         <div class="plot-box" id="plot-box8">
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <img id="apsr_time" />
+                <img id="apsr_time" alt="Time vs Phase" src=""/>
               </td>
             </tr>
           </table>
@@ -473,81 +453,89 @@ rus pretium.</p>
         <div class="plot-box" id="plot-box9">  
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <img id="apsr_freq" />
+                <img id="apsr_freq" alt="Frequency vs Phase" src=""/>
               </td>
             </tr>
           </table>
         </div>
         <div class="clear"></div>
+
+        <!--help toggles added 18/7/11 LT-->
+        <div class="help-toggle" id="help-apsr-text">
+          <div class="close-div"><a id="help-apsr-link" href="#">x</a></div>
+          <p></p>
+        </div>
+
       </div>
     </div>
   </div>
 
   <!--caspsr-->
   <div class="box" id="box6">
-    <div class="inner-box" id="inner-box6">	
+    <div class="inner-box" id="inner-box7">	
       <div class="obs-box" id="caspsr-box">
-        <div class="data-box" id="data-box4">
+        <div class="data-box" id="data-box7">
           <div id="caspsr_obs_data"></div>
         </div>
-        <div class="plot-box" id="plot-box7">               
+
+        <!--help-icon added 18/7/11 LT-->
+        <a href="#" class="help-link backend" id="help-caspsr" title="What is CASPSR?"><span class="help-icon">?</span></a>
+
+        <div class="plot-box" id="plot-box14">               
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <img id="caspsr_flux" />
+                <img id="caspsr_flux" alt="Flux Density vs Phase" src=""/>
               </td>
             </tr>
           </table>
         </div> 
 
-        <div class="plot-box" id="plot-box8">
+        <div class="plot-box" id="plot-box15">
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <img id="caspsr_time" />
+                <img id="caspsr_time" alt="Time vs Phase" src=""/>
               </td>
             </tr>
           </table>
         </div>  
 
-        <div class="plot-box" id="plot-box9">  
+        <div class="plot-box" id="plot-box16">  
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <img id="caspsr_freq" />
+                <img id="caspsr_freq" alt="Frequency vs Phase" src=""/>
               </td>
             </tr>
           </table>
         </div>
 
-        <div class="plot-box">
+        <div class="plot-box" id="plot-box17">
           <table class="gridtable">
             <tr>
-            </tr>
-            <tr>
               <td>
-                <img id="caspsr_bandpass" />
+                <img id="caspsr_bandpass" alt="Bandpass" src=""/>
               </td>
             </tr>
           </table>
         </div>
 
         <div class="clear"></div>
+
+        <!--help toggles added 18/7/11 LT-->
+        <div class="help-toggle" id="help-caspsr-text">
+          <div class="close-div"><a id="help-caspsr-link" href="#">x</a></div>
+          <p></p>
+        </div>
+
       </div>
     </div>
   </div>
 
   <div id="webcam-box">
-    <img id="parkes_webcam" />
+    <img id="parkes_webcam" alt="Parkes Webcam" src=""/>
 
     <div id="amount"></div>
     <div id="slider"></div>
@@ -564,10 +552,20 @@ rus pretium.</p>
         <div id="schedule_tomorrow"></div>
       </div>
 
+      <!--help-icon added 18/7/11 LT-->
+      <a href="#" class="help-link" id="help-schedules" title="Explain the observing schedules"><span class="help-icon">?</span></a>
+
       <div class="clear"></div>
+
+      <!--help toggles added 18/7/11 LT-->
+      <div class="help-toggle" id="help-schedules-text">
+        <div class="close-div"><a id="help-schedules-link" href="#">x</a></div>
+        <p></p>
+      </div>
+
     </div>
   </div>
-
+</div>
 
 <!--footer-->
 <div id="footer">
@@ -578,28 +576,9 @@ rus pretium.</p>
   </div>
 </div>
 
-<!--<<<<<<< HEAD
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-  <script src="http://jquery.com/files/social/js/jquery.tabs.js"></script>
-  <script type="text/javascript" src="js/scripts.js"></script>
-  <script type="text/javascript" src="js/jquery.progressbar.js"></script>
-
-  <script type="text/javascript">
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-17026468-1']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-     })();
-  </script>
-=======-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-<script src="http://jquery.com/files/social/js/jquery.tabs.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://jquery.com/files/social/js/jquery.tabs.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="js/jquery.progressbar.js"></script>
 
@@ -614,7 +593,6 @@ rus pretium.</p>
    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
    })();
  </script>
-<!-->>>>>>> upstream/master-->
 
 </body> 
 </html>

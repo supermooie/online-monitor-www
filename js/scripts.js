@@ -75,6 +75,7 @@ function HideDefaults()
   $('#help').hide();
   //added 10/7/11 LT
   $('.help-toggle').hide();
+  
 }
 
 function HandleTabs()
@@ -200,7 +201,7 @@ $(document).ready(function() {
     setInterval(function() {
         UpdatePlots();
         UpdateObservingParameters();
-        HandleProgressbar();
+        //HandleProgressbar();
       }, 5000);
 
     setInterval(function() {
@@ -351,27 +352,27 @@ $(document).ready(function() {
     $('#webcam-box').draggable();
 });
 
-//Toggle Help boxes - added 10/7/11 LT
-function ToggleHelpBoxes() {
+//Toggle Help icons - added 18/7/11 LT
+function ToggleHelpIcons() {
 
-    $('.help-link').click(function() {
-
-      var linkId = this.id;
-
-      //show
-      $('#' + linkId + '-text').fadeIn();
-
-      //hide
-      $('#' + linkId + '-link').click(function() {
-        $('#' + linkId + '-text').hide();
-        return false;
-        });
-
-    return false;
+  $('#help-all').click(function() {
+    $('.help-icon').toggle();
+    if ($('.help-icon').is(':visible')) {
+      $('#help-icon').css('color','red');
+      $('#help-icon').attr("title", "Hide help icons");
+    } else {
+      $('#help-icon').css('color','green');
+    }
     });
 
 }
 
+//Toggle Help boxes - added 18/7/11 LT
+function ToggleHelpBoxes() {
+
+  $.getScript('js/toggle_help_boxes.js');
+
+}
 
 $(document).ready(function() {
     HideDefaults();
@@ -384,6 +385,7 @@ $(document).ready(function() {
     HandleSlider();
     //HandleProgressbar();
     HandleButtonset();
+    ToggleHelpIcons();
     ToggleHelpBoxes();
     GetTelescopeInformation();
 });
