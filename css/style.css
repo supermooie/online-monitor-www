@@ -32,6 +32,12 @@ h5 {
   font-size: 112.5%; 
 }
 
+.help-toggle h3 {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #header {
   height:70px;
   color: #C2C2C2;
