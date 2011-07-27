@@ -73,6 +73,9 @@ function HideDefaults()
   $('#dfb3_search_main').hide();
   $('#dfb4_search_main').hide();
   $('#help').hide();
+  //added 10/7/11 LT
+  $('.help-toggle').hide();
+  
 }
 
 function HandleTabs()
@@ -198,7 +201,7 @@ $(document).ready(function() {
     setInterval(function() {
         UpdatePlots();
         UpdateObservingParameters();
-        HandleProgressbar();
+        //HandleProgressbar();
       }, 5000);
 
     setInterval(function() {
@@ -349,6 +352,28 @@ $(document).ready(function() {
     $('#webcam-box').draggable();
 });
 
+//Toggle Help icons - added 18/7/11 LT
+function ToggleHelpIcons() {
+
+  $('#help-all').click(function() {
+    $('.help-icon').toggle();
+    if ($('.help-icon').is(':visible')) {
+      $('#help-icon').css('color','red');
+      $('#help-icon').attr("title", "Hide help icons");
+    } else {
+      $('#help-icon').css('color','green');
+    }
+    });
+
+}
+
+//Toggle Help boxes - added 18/7/11 LT
+function ToggleHelpBoxes() {
+
+  $.getScript('js/toggle_help_boxes.js');
+
+}
+
 $(document).ready(function() {
     HideDefaults();
     UpdatePlots();
@@ -358,7 +383,9 @@ $(document).ready(function() {
     GetTimes();
     HandleTabs();
     HandleSlider();
-    HandleProgressbar();
+    //HandleProgressbar();
     HandleButtonset();
+    ToggleHelpIcons();
+    ToggleHelpBoxes();
     GetTelescopeInformation();
 });
