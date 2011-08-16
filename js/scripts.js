@@ -124,17 +124,10 @@ function UpdatePlots()
 {
   $.getScript('js/update_apsr.js');
   $.getScript('js/update_caspsr.js');
-
-  if ($('#inner-box2').is(":visible") == true) {
-    $.getScript('js/update_dfb3_fold.js');
-  }
+  $.getScript('js/update_fold_plots.js');
 
   if ($('#inner-box8').is(":visible") == true) {
     $.getScript('js/update_dfb3_search.js');
-  }
-
-  if ($('#inner-box4').is(":visible") == true) {
-    $.getScript('js/update_dfb4_fold.js');
   }
 
   if ($('#inner-box9').is(":visible") == true) {
