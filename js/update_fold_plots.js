@@ -22,16 +22,16 @@ update_plots('dfb4');
 
 function update_plots(backend)
 {
-  var is_observing = 0;
   // Check if DFBs are creating new plots (i.e. currently observing).
   $.get('is_observing.php?backend=' + backend, function(data) {
-      is_observing = data;
-  });
+      var is_observing = data;
 
-  for (var i = 0; i < filenames.length; i++) {
-    var url = is_observing ? plot_directory + backend + filenames[i] + '?' + random : not_observing_image;
-    document.getElementById(backend + divs[i]).src = url;
-  }
+      for (var i = 0; i < filenames.length; i++) {
+        var url = is_observing == 1 ? plot_directory + backend + filenames[i] + '?' + random : not_observing_image;
+        document.getElementById(backend + divs[i]).src = url;
+      }
+
+  });
 
   if ($('#' + backend + '_main').is(":visible") == true) {
     url = plot_directory + $('#' + backend + '_main').data("src").plot + '?' + random;
