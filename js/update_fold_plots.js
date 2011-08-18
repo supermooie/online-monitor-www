@@ -24,7 +24,7 @@ function update_plots(backend)
 {
   // Check if DFBs are creating new plots (i.e. currently observing).
   $.get('is_observing.php?backend=' + backend, function(data) {
-      var is_observing = data;
+      var is_observing = jQuery.trim(data);
 
       for (var i = 0; i < filenames.length; i++) {
         var url = is_observing == 1 ? plot_directory + backend + filenames[i] + '?' + random : not_observing_image;
