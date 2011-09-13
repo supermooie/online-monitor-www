@@ -58,13 +58,7 @@ function GetApsrObsInformation($data_file)
     $data = file($file_to_read);
     list($key, $value) = preg_split('/\s+/', trim($data[$i]));
 
-    echo '<table class="gridtable" align="left">';
-
-    if ($data_file == 'apsr_obs.info') {
-      echo '<tr><th rowspan=7>A<br />P<br />S<br />R</th></tr>';
-    } else {
-      echo '<tr><th rowspan=7>C<br />A<br />S<br />P<br />S<br />R</th></tr>';
-    }
+    echo '<table class="zebra-striped">';
 
     for ($i = 3; $i <= 8; $i++) {
       list($key, $value) = preg_split('/\s+/', trim($data[$i]));
@@ -92,30 +86,8 @@ function GetDfbObsInformation($data_file)
 
     $vapfile = 'vapdir/vaprun.txt';
 
-    echo '<table border=1 class="gridtable" align="left">';
-
-    // Account all DFB3, DFB4, and their corresponding search modes.
-    /*if ($data_file == 'dfb3_fold.dat') {
-    } else {
-      echo '<tr><th rowspan=8>D<br>F<br>B<br>4</th></tr>';
-    }*/
-
-    switch ($data_file) {
-    case 'dfb3_fold.dat':
-      echo '<tr><th rowspan=8>D<br />F<br />B<br />3</th></tr>';
-      break;
-    case 'dfb4_fold.dat':
-      echo '<tr><th rowspan=8>D<br />F<br />B<br />4</th></tr>';
-      break;
-    case 'dfb3_search.dat':
-      echo '<tr><th rowspan=15>D<br />F<br />B<br />3</th></tr>';
-      break;
-    case 'dfb4_search.dat':
-      echo '<tr><th rowspan=15>D<br />F<br />B<br />4</th></tr>';
-      break;
-    default:
-      break;
-    }
+    //echo '<table border=1 class="gridtable" align="left">';
+    echo '<table class="zebra-striped">';
 
     $count = count($vap_fields);
     for ($i = 0; $i < $count; $i++) {
@@ -136,7 +108,6 @@ function GetDfbObsInformation($data_file)
   }
 }
 
-//load jquery (added LT 17/7/11)
 echo "<script type='text/javascript'> $.getScript('js/toggle_help_boxes.js'); </script>";
 
 ?>

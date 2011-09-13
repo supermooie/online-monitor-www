@@ -1,6 +1,6 @@
 <?php
 
-$data = file('dfb3_fold.dat');
+//$data = file('dfb3_fold.dat');
 
 // TODO: THIS IS A TERRIBLE METHOD
 $temp = explode('  ', $data[0]);
@@ -27,7 +27,7 @@ $stt_time = $temp[13];
   //<table class=\"pretty\">
 
 echo "
-  <table class=\"gridtable\" align=\"left\">
+  <table class=\"zebra-striped\" align=\"left\">
   <tr><td> Filename </td><td>$filename</td></tr>
   <tr><td> Observer/s </td><td>$observer</td></tr>
   <tr><td> Project ID </td><td>$projid</td></tr>

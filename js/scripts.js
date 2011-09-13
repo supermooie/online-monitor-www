@@ -125,14 +125,8 @@ function UpdatePlots()
   $.getScript('js/update_apsr.js');
   $.getScript('js/update_caspsr.js');
   $.getScript('js/update_fold_plots.js');
-
-  if ($('#inner-box8').is(":visible") == true) {
-    $.getScript('js/update_dfb3_search.js');
-  }
-
-  if ($('#inner-box9').is(":visible") == true) {
-    $.getScript('js/update_dfb4_search.js');
-  }
+  $.getScript('js/update_dfb3_search.js');
+  $.getScript('js/update_dfb4_search.js');
 }
 
 function UpdateWebcamImage()
@@ -351,10 +345,7 @@ function ToggleHelpIcons() {
   $('#help-all').click(function() {
     $('.help-icon').toggle();
     if ($('.help-icon').is(':visible')) {
-      $('#help-icon').css('color','red');
       $('#help-icon').attr("title", "Hide help icons");
-    } else {
-      $('#help-icon').css('color','green');
     }
     });
 
