@@ -80,11 +80,7 @@ function HideDefaults()
 
 function HandleTabs()
 {
-  $("#box1").tabs();
-  $("#box2").tabs();
-  $("#box3").tabs();
-  $("#box4").tabs();
-  $("#box6").tabs(); // CASPSR
+  $('.tabs').tabs();
 }
 
 function HandleButtonset()

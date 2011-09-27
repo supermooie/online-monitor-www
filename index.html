@@ -5,9 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Parkes Online Monitor</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="css/jquery.tabs.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
 <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
@@ -56,28 +55,57 @@
   </div>
 
   <div class="row">
-    <div class="span5 columns offset1">
-      <div class="obs_data" id="dfb3_obs_data"></div>
+    <div class="span15 columns offset1">
+      <h5>
+      <ul class="tabs">
+        <li class="active"><a href="#pdfb3_fold">PDFB3 - Fold Mode</a></li>
+        <li><a href="#pdfb3_search">PDFB3 - Search Mode</a></li>
+      </ul>
+      </h5>
     </div>
+  </div>
 
-    <div class="span4 columns">
-      Flux Density
-      <a href="#" id="dfb3_fold_stokes_toggle"><img id="dfb3_fold_stokes" src=""/></a>
-    </div>
+  <div class="row">
+    <div class="tab-content">
+      <div class="active" id="pdfb3_fold">
 
-    <div class="span4 columns">
-      Time
-      <a href="#" id="dfb3_fold_time_toggle"><img id="dfb3_fold_time" src=""/></a>
-    </div>
+        <div class="span5 columns offset1">
+          <div class="obs_data" id="dfb3_obs_data"></div>
+        </div>
 
-    <div class="span4 columns">
-      Frequency
-      <a href="#" id="dfb3_fold_freq_toggle"><img id="dfb3_fold_freq" src=""/></a>
-    </div>
+        <div class="span4 columns">
+          Flux Density
+          <a href="#" id="dfb3_fold_stokes_toggle"><img id="dfb3_fold_stokes" src=""/></a>
+        </div>
 
-    <div class="span4 columns">
-      Bandpass
-      <a href="#" id="dfb3_bandpass_toggle"><img id="dfb3_bandpass" src=""/></a>
+        <div class="span4 columns">
+          Time
+          <a href="#" id="dfb3_fold_time_toggle"><img id="dfb3_fold_time" src=""/></a>
+        </div>
+
+        <div class="span4 columns">
+          Frequency
+          <a href="#" id="dfb3_fold_freq_toggle"><img id="dfb3_fold_freq" src=""/></a>
+        </div>
+
+        <div class="span4 columns">
+          Bandpass
+          <a href="#" id="dfb3_bandpass_toggle"><img id="dfb3_bandpass" src=""/></a>
+        </div>
+
+      </div>
+      <div id="pdfb3_search">
+        <div class="span5 columns offset1">
+          <div id="dfb3_search_data"></div>
+        </div>
+
+        <div class="span4 columns">
+          Frequency vs Time
+          <a href="#" id="dfb3_search_freq_toggle"><img id="dfb3_search_freq" src=""/></a>
+          Digitiser Counts
+          <a href="#" id="dfb3_search_hist_toggle"><img id="dfb3_search_hist" src=""/></a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -86,28 +114,57 @@
   </div>
 
   <div class="row">
-    <div class="span5 columns offset1">
-      <div class="obs_data" id="dfb4_obs_data"></div>
+    <div class="span15 columns offset1">
+      <h5>
+        <ul class="tabs">
+          <li class="active"><a href="#pdfb4_fold">PDFB4 - Fold Mode</a></li>
+          <li><a href="#pdfb4_search">PDFB4 - Search Mode</a></li>
+        </ul>
+      </h5>
     </div>
+  </div>
 
-    <div class="span4 columns">
-      Flux Density
-      <a href="#" id="dfb4_fold_stokes_toggle"><img id="dfb4_fold_stokes" src=""/></a>
-    </div>
+  <div class="row">
+    <div class="tab-content">
+      <div class="active" id="pdfb4_fold">
 
-    <div class="span4 columns">
-      Time
-      <a href="#" id="dfb4_fold_time_toggle"><img id="dfb4_fold_time" src=""/></a>
-    </div>
+        <div class="span5 columns offset1">
+          <div class="obs_data" id="dfb4_obs_data"></div>
+        </div>
 
-    <div class="span4 columns">
-      Frequency
-      <a href="#" id="dfb4_fold_freq_toggle"><img id="dfb4_fold_freq" src=""/></a>
-    </div>
+        <div class="span4 columns">
+          Flux Density
+          <a href="#" id="dfb4_fold_stokes_toggle"><img id="dfb4_fold_stokes" src=""/></a>
+        </div>
 
-    <div class="span4 columns">
-      Bandpass
-      <a href="#" id="dfb4_bandpass_toggle"><img id="dfb4_bandpass" src=""/></a>
+        <div class="span4 columns">
+          Time
+          <a href="#" id="dfb4_fold_time_toggle"><img id="dfb4_fold_time" src=""/></a>
+        </div>
+
+        <div class="span4 columns">
+          Frequency
+          <a href="#" id="dfb4_fold_freq_toggle"><img id="dfb4_fold_freq" src=""/></a>
+        </div>
+
+        <div class="span4 columns">
+          Bandpass
+          <a href="#" id="dfb4_bandpass_toggle"><img id="dfb4_bandpass" src=""/></a>
+        </div>
+      </div>
+
+      <div id="pdfb4_search">
+        <div class="span5 columns offset1">
+          <div id="dfb4_search_data"></div>
+        </div>
+
+        <div class="span4 columns">
+          Frequency vs Time
+          <a href="#" id="dfb4_search_freq_toggle"><img id="dfb4_search_freq" src=""/></a>
+          Digitiser Counts
+          <a href="#" id="dfb4_search_hist_toggle"><img id="dfb4_search_hist" src=""/></a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -162,44 +219,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="span9 columns offset1">
-      <div class="page-header">
-        <h3> PDFB3 - Search Mode </h3>
-      </div>
-    </div>
-    <div class="span9 columns offset1">
-      <div class="page-header">
-        <h3> PDFB4 - Search Mode </h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="span5 columns offset1">
-      <div id="dfb3_search_data"></div>
-    </div>
-
-    <div class="span4 columns">
-      Frequency vs Time
-      <a href="#" id="dfb3_search_freq_toggle"><img id="dfb3_search_freq" src=""/></a>
-      Digitiser Counts
-      <a href="#" id="dfb3_search_hist_toggle"><img id="dfb3_search_hist" src=""/></a>
-    </div>
-
-
-    <div class="span5 columns offset1">
-      <div id="dfb4_search_data"></div>
-    </div>
-
-    <div class="span4 columns">
-      Frequency vs Time
-      <a href="#" id="dfb4_search_freq_toggle"><img id="dfb4_search_freq" src=""/></a>
-      Digitiser Counts
-      <a href="#" id="dfb4_search_hist_toggle"><img id="dfb4_search_hist" src=""/></a>
-    </div>
-  </div>
-
   <div class="inner-box" id="inner-box10">
     <a href="#" id="dfb3_search_toggle"><img id="dfb3_search_main" alt="Main image" src=""/></a>
   </div>
@@ -249,6 +268,7 @@
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 <script type="text/javascript" src="http://jquery.com/files/social/js/jquery.tabs.js"></script>
+<script type="text/javascript" src="http://twitter.github.com/bootstrap/1.3.0/bootstrap-tabs.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 
 <script type="text/javascript">
