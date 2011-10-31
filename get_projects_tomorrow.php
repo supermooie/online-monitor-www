@@ -4,7 +4,7 @@
  * Create the table of observing projects for the current day.
  */
 
-$contents = strip_tags(file_get_contents('schedules/apr11sch_v2.html'));
+$contents = strip_tags(file_get_contents('schedules/oct11sch_v1.html'));
 
 $today = date('d M');
 
