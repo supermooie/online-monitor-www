@@ -6,7 +6,7 @@
 <title>Parkes Online Monitor</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css">
+<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
 <link rel="shortcut icon" href="favicon.ico" />
 </head>
 
@@ -80,10 +80,9 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="tab-content">
-      <div class="active" id="pdfb3_fold">
-
+  <div class="tab-content">
+    <div class="active" id="pdfb3_fold">
+      <div class="row">
         <div class="span5 columns offset1">
           <div class="obs_data" id="dfb3_obs_data"></div>
         </div>
@@ -103,9 +102,11 @@
         <div class="span4 columns">
           <a href="#" id="dfb3_bandpass_toggle"><img id="dfb3_bandpass" src=""/></a>
         </div>
-
       </div>
-      <div id="pdfb3_search">
+    </div>
+
+    <div id="pdfb3_search">
+      <div class="row">
         <div class="span5 columns offset1">
           <div id="dfb3_search_data"></div>
         </div>
@@ -135,9 +136,9 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="tab-content">
-      <div class="active" id="pdfb4_fold">
+  <div class="tab-content">
+    <div class="active" id="pdfb4_fold">
+      <div class="row">
 
         <div class="span5 columns offset1">
           <div class="obs_data" id="dfb4_obs_data"></div>
@@ -159,8 +160,10 @@
           <a href="#" id="dfb4_bandpass_toggle"><img id="dfb4_bandpass" src=""/></a>
         </div>
       </div>
+    </div>
 
-      <div id="pdfb4_search">
+    <div id="pdfb4_search">
+      <div class="row">
         <div class="span5 columns offset1">
           <div id="dfb4_search_data"></div>
         </div>

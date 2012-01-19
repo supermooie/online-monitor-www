@@ -43,7 +43,7 @@ foreach ($matches[0] as $m) {
   $i++;
 }
 
-echo '<table class="gridtable">';
+echo '<table class="condensed-table zebra-striped bordered-table">';
 echo "<th colspan=\"3\">$today</th>";
 echo '<tr><th>Start </th><th>End </th><th>Project</th></tr>';
 

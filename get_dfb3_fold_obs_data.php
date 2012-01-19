@@ -27,7 +27,7 @@ $stt_time = $temp[13];
   //<table class=\"pretty\">
 
 echo "
-  <table class=\"zebra-striped\" align=\"left\">
+  <table class=\".zebra-striped\" align=\"left\">
   <tr><td> Filename </td><td>$filename</td></tr>
   <tr><td> Observer/s </td><td>$observer</td></tr>
   <tr><td> Project ID </td><td>$projid</td></tr>

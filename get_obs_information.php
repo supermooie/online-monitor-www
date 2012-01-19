@@ -58,7 +58,7 @@ function GetApsrObsInformation($data_file)
     $data = file($file_to_read);
     list($key, $value) = preg_split('/\s+/', trim($data[$i]));
 
-    echo '<table class="zebra-striped">';
+    echo '<table class="condensed-table zebra-striped bordered-table">';
 
     for ($i = 3; $i <= 8; $i++) {
       list($key, $value) = preg_split('/\s+/', trim($data[$i]));
@@ -87,7 +87,7 @@ function GetDfbObsInformation($data_file)
     $vapfile = 'vapdir/vaprun.txt';
 
     //echo '<table border=1 class="gridtable" align="left">';
-    echo '<table class="zebra-striped">';
+    echo '<table class="condensed-table zebra-striped bordered-table">';
 
     $count = count($vap_fields);
     for ($i = 0; $i < $count; $i++) {
