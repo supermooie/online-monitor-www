@@ -15,3 +15,7 @@ document.getElementById('apsr_time').src = url;
 url = 'http://pulseatparkes.atnf.csiro.au/dev/plots/apsr_freq_vs_phase.png?' + random;
 img.src = url;
 document.getElementById('apsr_freq').src = url;
+
+url = 'http://pulseatparkes.atnf.csiro.au/dev/plots/apsr_bandpass.png?' + random;
+img.src = url;
+document.getElementById('apsr_bandpass').src = url;
