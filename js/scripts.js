@@ -55,15 +55,8 @@ function GetTelescopeInformation()
             break;
           }
       });
-
-      //alert(items);
-
-      //alert(data);
-      //$('#debug').text(data);
     });
 }
-
-//var is_p456 = 0;
 
 // Hides the default main (big) DFB3 and DFB4 images.
 function HideDefaults()
@@ -73,31 +66,13 @@ function HideDefaults()
   $('#dfb3_search_main').hide();
   $('#dfb4_search_main').hide();
   $('#help').hide();
-  //added 10/7/11 LT
   $('.help-toggle').hide();
-  
-}
-
-function HandleTabs()
-{
-  $('.tabs').tabs();
 }
 
 function HandleButtonset()
 {
   $("#radio").buttonset();
 }
-
-/*function HandleProgressbar()
-{
-  if (is_p456) {
-    $.get('get_observation_progress.php?obs_type=dfb3_fold', function(data) {
-        $("#pb1").progressBar(data);
-    });
-  } else {
-    $("#pb1").html('');
-  }
-}*/
 
 function HandleSlider()
 {
@@ -152,14 +127,6 @@ function GetCurrentProject()
   $('#schedule_today').load('get_projects_today.php');
   $('#schedule_tomorrow').load('get_projects_tomorrow.php');
 }
-
-function GetTimes()
-{
-  //$('#lmst_time').load('get_current_lmst.php');
-  //$('#aest_time').load('get_current_aest.php');
-  //$('#utc_time').load('get_current_utc.php');
-}
-
 
 // Handle all toggleable elements
 $(document).ready(function() {
@@ -335,37 +302,13 @@ $(document).ready(function() {
     $('#webcam-box').draggable();
 });
 
-//Toggle Help icons - added 18/7/11 LT
-function ToggleHelpIcons() {
-
-  $('#help-all').click(function() {
-    $('.help-icon').toggle();
-    if ($('.help-icon').is(':visible')) {
-      $('#help-icon').attr("title", "Hide help icons");
-    }
-    });
-
-}
-
-//Toggle Help boxes - added 18/7/11 LT
-function ToggleHelpBoxes() {
-
-  $.getScript('js/toggle_help_boxes.js');
-
-}
-
 $(document).ready(function() {
     HideDefaults();
     UpdatePlots();
     UpdateWebcamImage();
     UpdateObservingParameters();
     GetCurrentProject();
-    GetTimes();
-    HandleTabs();
     HandleSlider();
-    //HandleProgressbar();
     HandleButtonset();
-    ToggleHelpIcons();
-    ToggleHelpBoxes();
     GetTelescopeInformation();
 });
