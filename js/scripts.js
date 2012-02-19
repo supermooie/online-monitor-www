@@ -1,6 +1,23 @@
 var refresh_rate = 5;
 var sleep = 0;
 
+$(document).ready(function() {
+    HideDefaults();
+    UpdatePlots();
+    UpdateWebcamImage();
+    UpdateObservingParameters();
+    GetCurrentProject();
+    GetTelescopeInformation();
+    HandleTooltips();
+});
+
+function HandleTooltips()
+{
+  $("a[rel=tooltip]").popover({
+      placement: 'bottom'
+  });
+}
+
 function GetTelescopeInformation()
 {
   $.getJSON('get_telescope_information.php', function(data) {
@@ -69,26 +86,6 @@ function HideDefaults()
   $('.help-toggle').hide();
 }
 
-function HandleButtonset()
-{
-  $("#radio").buttonset();
-}
-
-function HandleSlider()
-{
-    $( "#slider" ).slider({
-      value: 2,
-      min: 1,
-      max: 10,
-      step: 1,
-      slide: function( event, ui ) {
-        refresh_rate = ui.value;
-        var seconds_string = ui.value == 1 ? "second" : "seconds";
-        $("#amount" ).text( "Update rate (s): " + ui.value);
-      }
-    });
-    $("#amount" ).text( "Update rate (s): " + $( "#slider" ).slider( "value" ));
-}
 
 // Updates latest plots if backend is currently shown.
 function UpdatePlots()
@@ -302,13 +299,3 @@ $(document).ready(function() {
     $('#webcam-box').draggable();
 });
 
-$(document).ready(function() {
-    HideDefaults();
-    UpdatePlots();
-    UpdateWebcamImage();
-    UpdateObservingParameters();
-    GetCurrentProject();
-    HandleSlider();
-    HandleButtonset();
-    GetTelescopeInformation();
-});
